@@ -3,8 +3,10 @@
  */
 
 .stance {
-  @include row(space-between, flex-start);
-  gap: 3rem;
+  &__items {
+    @include row(space-between, flex-start);
+    gap: 3rem;
+  }
 
   &__item {
     @include col(3.5, "md");

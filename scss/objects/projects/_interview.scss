@@ -1,0 +1,118 @@
+/**
+ * Project - Interview
+ */
+
+.interview {
+  &__items {
+    @include row(space-between, flex-start);
+    gap: 0;
+  }
+
+  &__item {
+    position: relative;
+    flex: 1 1 100%;
+    padding: 0;
+
+    @media (min-width: breakpoint("md")) {
+      flex: 1 0 33.33%;
+    }
+  }
+
+  &__cover {
+    min-height: 18rem;
+
+    @media (min-width: breakpoint("md")) {
+      min-height: 40rem;
+    }
+  }
+
+  &__head {
+    position: absolute;
+    top: 10.5rem;
+    left: 0;
+    z-index: 10;
+    padding: 0 0.75rem;
+
+    @media (min-width: breakpoint("md")) {
+      top: 16.5rem;
+      left: 0;
+      padding: 0 2.25rem;
+    }
+  }
+
+  &__body {
+    padding: 1.5rem 0;
+    text-align: justify;
+
+    @media (min-width: breakpoint("md")) {
+      position: absolute;
+      top: 24rem;
+      left: 0;
+      z-index: 10;
+      width: 100%;
+      padding: 1.5rem 2.25rem;
+      color: themeColor("lightest");
+    }
+  }
+
+  &__lead {
+    color: themeColor("primary");
+    font-weight: 700;
+    font-size: $h3FontSize;
+    line-height: 1.5;
+  }
+
+  &__name, &__person {
+    display: inline-block;
+    padding-right: 0.75rem;
+    color: themeColor("lightest");
+    line-height: 1;
+
+    @media (min-width: breakpoint("md")) {
+      display: block;
+    }
+  }
+
+  &__linkWrap {
+    width: 24rem;
+    margin: auto;
+    padding: 0.75rem;
+    color: themeColor("primary");
+
+    @media (min-width: breakpoint("md")) {
+      width: 18rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  &__linkContent {
+    font-weight: 700;
+    font-weight: $h4FontSize;
+    text-align: center;
+    line-height: 2;
+  }
+
+  &__linkButton a {
+    @include button();
+    width: 100%;
+    padding: 0;
+    border: 1px solid themeColor("primary");
+    background-color: themeColor("primary");
+    color: themeColor("lightest");
+    font-weight: 700;
+    font-size: $h4FontSize;
+    text-transform: uppercase;
+
+    @media (min-width: breakpoint("md")) {
+      width: 15rem;
+
+      &:not(:hover) {
+        border: 1px solid themeColor("primary");
+        background-color: themeColor("lightest");
+        color: themeColor("primary");
+      }
+    }
+  }
+}
