@@ -277,6 +277,11 @@ button, input, select, textarea {
  * Layout - Header
  */
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
   height: 5.25rem;
 }
 .header__inner {
@@ -584,6 +589,91 @@ button, input, select, textarea {
 .section__inner {
   background-color: var(--wp--preset--color--lightest, #ffffff);
 }
+/**
+ * Project - Hero
+ */
+.hero__inner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.hero__cover {
+  width: 100%;
+  height: 100%;
+  filter: brightness(0.75);
+}
+.hero__coverImage {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+}
+.hero__coverImage.--image_1 {
+  top: 0;
+  left: 0;
+  background: url("./assets/main00.jpg") no-repeat center center/cover scroll;
+}
+.hero__coverImage.--image_2 {
+  right: 0;
+  bottom: 0;
+  background: url("./assets/main01.jpg") no-repeat center center/cover scroll;
+}
+@media (min-width: 900px) {
+  .hero__coverImage {
+    width: 50%;
+    height: 100%;
+  }
+}
+.hero__coverGradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(120deg, transparent 0%, transparent 24.9%, var(--wp--preset--color--primary, #8DD813) 25%, transparent 25.1%, transparent 74.9%, var(--wp--preset--color--primary, #8DD813) 75%, transparent 75.1%);
+}
+@media (min-width: 900px) {
+  .hero__coverGradient {
+    background: repeating-linear-gradient(120deg, transparent 0%, transparent 33.3%, var(--wp--preset--color--primary, #8DD813) 33.35%, transparent 33.4%);
+  }
+}
+.hero__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.hero__content {
+  color: var(--wp--preset--color--primary, #8DD813);
+  text-align: center;
+}
+.hero__largeText {
+  margin-top: 6rem;
+  font-style: italic;
+  font-weight: 700;
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1;
+}
+.hero__smallText {
+  font-weight: 200;
+  font-size: clamp(1rem, 5.33vw, 2rem);
+  line-height: 1;
+}
+.hero__arrow {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 3rem;
+  height: auto;
+  margin: auto;
+}
+
 /**
  * Project - Post Item
  */
