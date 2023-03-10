@@ -13,11 +13,11 @@
 
   &__heading {
     display: block;
-    margin-bottom: 3rem;
+    margin-bottom: 4.5rem;
     color: themeColor("dark");
     font-weight: 700;
     font-size: $h1FontSize;
-    line-height: 2;
+    line-height: 1.25;
 
     &::before {
       content: attr(id);

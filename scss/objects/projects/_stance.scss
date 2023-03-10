@@ -15,8 +15,8 @@
 
   &__itemImage {
     @media (max-width: breakpoint("md") - 0.1) {
-      margin-left: -$gutter * 2;
-      margin-right: -$gutter * 2;
+      margin-left: -$gutter;
+      margin-right: -$gutter;
       padding: 0;
 
       img {

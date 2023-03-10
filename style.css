@@ -591,11 +591,11 @@ button, input, select, textarea {
 }
 .section__heading {
   display: block;
-  margin-bottom: 3rem;
+  margin-bottom: 4.5rem;
   color: var(--wp--preset--color--dark, #808080);
   font-weight: 700;
   font-size: var(--wp--custom--font-size--xx-large, 2rem);
-  line-height: 2;
+  line-height: 1.25;
 }
 .section__heading::before {
   content: attr(id);
@@ -741,8 +741,8 @@ button, input, select, textarea {
 }
 @media (max-width: 899.9px) {
   .stance__itemImage {
-    margin-left: -1.5rem;
-    margin-right: -1.5rem;
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
     padding: 0;
   }
   .stance__itemImage img {
