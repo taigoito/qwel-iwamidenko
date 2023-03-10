@@ -37,22 +37,12 @@
 				{
 					"slug": "primary",
 					"name": "Primary",
-					"color": "#3399cc"
+					"color": "#8DD813"
 				},
 				{
 					"slug": "primary-light",
 					"name": "Primary Light",
-					"color": "#85c2e0"
-				},
-				{
-					"slug": "secondary",
-					"name": "Secondary",
-					"color": "#cc334b"
-				},
-				{
-					"slug": "secondary-light",
-					"name": "Secondary Light",
-					"color": "#e08594"
+					"color": "#ABFF24"
 				}
 			]
 		},
@@ -71,7 +61,7 @@
 				{
 					"slug": "sans-serif",
 					"name": "Sans Serif",
-					"fontFamily": "\"Yu Gothic\", sans-serif"
+					"fontFamily": "Poppins, \"Noto Sans JP\", sans-serif"
 				},
 				{
 					"slug": "serif",

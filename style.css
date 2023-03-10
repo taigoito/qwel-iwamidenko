@@ -1,7 +1,6 @@
-@charset "UTF-8";
 /*
-Theme Name: Qwel Two Beta
-Description: This is a theme for someone's portfolio or blog. You can customize and use.
+Theme Name: Iwamidenko Recruit
+Description: This is a theme for Iwamidenko Recruit.
 Version: 1.0
 Requires PHP: 7.4
 Author: Taigo Ito
@@ -32,8 +31,8 @@ body {
   margin: 0;
   background-color: var(--wp--preset--color--lightest, #ffffff);
   color: var(--wp--preset--color--darkest, #262626);
-  font-family: "游ゴシック", "Yu Gothic", sans-serif;
-  font-weight: 500;
+  font-family: "Poppins", "Noto Sans JP", sans-serif;
+  font-weight: 400;
   line-height: var(--wp--custom--line-height--large, 1.8);
   letter-spacing: 0;
   -webkit-text-size-adjust: 100%;
@@ -42,8 +41,8 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin-top: var(--wp--custom--spacing--medium, 1.5rem);
   margin-bottom: var(--wp--custom--spacing--small, 0.75rem);
-  font-family: "游ゴシック", "Yu Gothic", sans-serif;
-  font-weight: 500;
+  font-family: "Poppins", "Noto Sans JP", sans-serif;
+  font-weight: 400;
 }
 
 h1 {
@@ -115,7 +114,7 @@ a, a:active {
   text-decoration: none;
 }
 a:hover, a:focus {
-  color: var(--wp--preset--color--primary, #3399cc);
+  color: var(--wp--preset--color--primary, #8DD813);
   text-decoration: underline;
 }
 
@@ -161,7 +160,7 @@ button, input, select, textarea {
   text-decoration: none;
 }
 .wp-block-navigation-item a:hover, .wp-block-navigation-item a:focus {
-  color: var(--wp--preset--color--primary, #3399cc);
+  color: var(--wp--preset--color--primary, #8DD813);
   text-decoration: underline;
 }
 .wp-block-social-links {
@@ -192,8 +191,8 @@ button, input, select, textarea {
 }
 .wp-block-query-pagination-numbers .page-numbers {
   display: inline-block;
-  background-color: var(--wp--preset--color--primary, #3399cc);
-  color: var(--wp--preset--color--lightest, #ffffff);
+  background-color: var(--wp--preset--color--primary, #8DD813);
+  color: var(--wp--preset--color--darkest, #262626);
   padding: var(--wp--custom--spacing--small, 0.75rem);
   border: none;
   border-radius: 3px;
@@ -203,7 +202,6 @@ button, input, select, textarea {
   outline: 0;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   cursor: pointer;
   transition: all 0.25s ease-in-out;
@@ -214,7 +212,7 @@ button, input, select, textarea {
   opacity: 0.85;
 }
 .wp-block-query-pagination-numbers .page-numbers.current {
-  background-color: var(--wp--preset--color--primary-light, #85c2e0);
+  background-color: var(--wp--preset--color--primary-light, #ABFF24);
   color: var(--wp--preset--color--darkest, #262626);
   cursor: default;
 }
@@ -360,7 +358,6 @@ button, input, select, textarea {
   outline: 0;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   cursor: pointer;
   transition: all 0.25s ease-in-out;
@@ -393,19 +390,11 @@ button, input, select, textarea {
   color: var(--wp--preset--color--darkest, #262626);
 }
 .btn.--primary {
-  background-color: var(--wp--preset--color--primary, #3399cc);
-  color: var(--wp--preset--color--lightest, #ffffff);
-}
-.btn.--primaryLight {
-  background-color: var(--wp--preset--color--primary-light, #85c2e0);
+  background-color: var(--wp--preset--color--primary, #8DD813);
   color: var(--wp--preset--color--darkest, #262626);
 }
-.btn.--secondary {
-  background-color: var(--wp--preset--color--secondary, #cc334b);
-  color: var(--wp--preset--color--lightest, #ffffff);
-}
-.btn.--secondaryLight {
-  background-color: var(--wp--preset--color--secondary-light, #e08594);
+.btn.--primaryLight {
+  background-color: var(--wp--preset--color--primary-light, #ABFF24);
   color: var(--wp--preset--color--darkest, #262626);
 }
 
@@ -477,8 +466,8 @@ button, input, select, textarea {
 }
 .form [type=button], .form [type=reset], .form [type=submit] {
   display: block;
-  background-color: var(--wp--preset--color--primary, #3399cc);
-  color: var(--wp--preset--color--lightest, #ffffff);
+  background-color: var(--wp--preset--color--primary, #8DD813);
+  color: var(--wp--preset--color--darkest, #262626);
   display: block;
   width: 12rem;
   margin: auto;
@@ -491,7 +480,6 @@ button, input, select, textarea {
   outline: 0;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   cursor: pointer;
   transition: all 0.25s ease-in-out;
