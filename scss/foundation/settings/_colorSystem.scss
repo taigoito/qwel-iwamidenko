@@ -38,7 +38,7 @@ $themeColors:      (
   @if ($yiq < 150) {
     @return themeColor("lightest");
   } @else {
-    @return themeColor("darkest");
+    @return themeColor("darker");
   }
 }
 
@@ -49,9 +49,9 @@ $themeColors:      (
 
 // bodyの設定
 $bodyBg:           themeColor("lightest");
-$bodyColor:        themeColor("darkest");
+$bodyColor:        themeColor("darker");
 
 // リンク文字の設定
 // リンクを強調するため、_typography.scssにて、文字の装飾も設定すること
-$linkColor:        themeColor("darker");
+$linkColor:        themeColor("dark");
 $linkHoverColor:   themeColor("primary");

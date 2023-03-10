@@ -2,7 +2,7 @@
  * Layout - Header
  */
 
-$headerHeight: 4.5rem;
+$headerHeight: 5.25rem;
 
 .header {
   height: $headerHeight;
@@ -10,6 +10,10 @@ $headerHeight: 4.5rem;
   &__inner {
     height: 100%;
     background-color: $bodyBg;
+
+    &.active {
+      background-color: transparent;
+    }
   }
 
   &__container {

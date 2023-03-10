@@ -30,7 +30,7 @@ html {
 body {
   margin: 0;
   background-color: var(--wp--preset--color--lightest, #ffffff);
-  color: var(--wp--preset--color--darkest, #262626);
+  color: var(--wp--preset--color--darker, #4d4d4d);
   font-family: "Poppins", "Noto Sans JP", sans-serif;
   font-weight: 400;
   line-height: var(--wp--custom--line-height--large, 1.8);
@@ -100,7 +100,7 @@ blockquote {
   margin-top: 0;
   margin-bottom: var(--wp--custom--spacing--small, 0.75rem);
   padding-left: 1em;
-  border-left: 4px solid var(--wp--preset--color--darkest, #262626);
+  border-left: 4px solid var(--wp--preset--color--darker, #4d4d4d);
 }
 blockquote p, blockquote cite {
   font-style: italic;
@@ -110,12 +110,12 @@ blockquote p, blockquote cite {
 }
 
 a, a:active {
-  color: var(--wp--preset--color--darker, #4d4d4d);
+  color: var(--wp--preset--color--dark, #808080);
   text-decoration: none;
 }
 a:hover, a:focus {
   color: var(--wp--preset--color--primary, #8DD813);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 img {
@@ -156,12 +156,12 @@ button, input, select, textarea {
   margin: 0;
 }
 .wp-block-navigation-item a, .wp-block-navigation-item a:active {
-  color: var(--wp--preset--color--darker, #4d4d4d);
+  color: var(--wp--preset--color--dark, #808080);
   text-decoration: none;
 }
 .wp-block-navigation-item a:hover, .wp-block-navigation-item a:focus {
   color: var(--wp--preset--color--primary, #8DD813);
-  text-decoration: underline;
+  text-decoration: none;
 }
 .wp-block-social-links {
   margin: 0;
@@ -192,7 +192,7 @@ button, input, select, textarea {
 .wp-block-query-pagination-numbers .page-numbers {
   display: inline-block;
   background-color: var(--wp--preset--color--primary, #8DD813);
-  color: var(--wp--preset--color--darkest, #262626);
+  color: var(--wp--preset--color--darker, #4d4d4d);
   padding: var(--wp--custom--spacing--small, 0.75rem);
   border: none;
   border-radius: 3px;
@@ -213,14 +213,14 @@ button, input, select, textarea {
 }
 .wp-block-query-pagination-numbers .page-numbers.current {
   background-color: var(--wp--preset--color--primary-light, #ABFF24);
-  color: var(--wp--preset--color--darkest, #262626);
+  color: var(--wp--preset--color--darker, #4d4d4d);
   cursor: default;
 }
 .wp-block-quote {
   margin-top: 0;
   margin-bottom: var(--wp--custom--spacing--small, 0.75rem);
   padding-left: 1em;
-  border-left: 4px solid var(--wp--preset--color--darkest, #262626);
+  border-left: 4px solid var(--wp--preset--color--darker, #4d4d4d);
 }
 .wp-block-quote p, .wp-block-quote cite {
   font-style: italic;
@@ -277,11 +277,14 @@ button, input, select, textarea {
  * Layout - Header
  */
 .header {
-  height: 4.5rem;
+  height: 5.25rem;
 }
 .header__inner {
   height: 100%;
   background-color: var(--wp--preset--color--lightest, #ffffff);
+}
+.header__inner.active {
+  background-color: transparent;
 }
 .header__container {
   max-width: 1200px;
@@ -292,26 +295,55 @@ button, input, select, textarea {
  * Layout - G Nav
  */
 .gNav {
+  position: relative;
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  height: 100%;
 }
 .gNav__siteBrand {
-  flex: 0 1 9rem;
-  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3.75rem;
+}
+.gNav__siteBrand span {
+  display: block;
+  color: var(--wp--preset--color--primary, #8DD813);
+  line-height: 1.25;
+}
+.gNav__primaryMenu {
+  gap: 2.25rem;
+  font-weight: bold;
+}
+.gNav__primaryMenu .wp-block-navigation-item__content {
+  padding: 0.375rem 0;
+  color: var(--wp--preset--color--primary, #8DD813);
   line-height: 1;
 }
-@media (max-width: 899.9px) {
-  .gNav__primaryMenu {
-    display: none !important;
-  }
+.gNav__primaryMenu .wp-block-navigation-item__content:hover {
+  border-bottom: 1px solid var(--wp--preset--color--dark, #808080);
+  color: var(--wp--preset--color--dark, #808080);
 }
-@media (max-width: 899.9px) {
-  .gNav__socialMenu {
-    display: none !important;
-  }
+.gNav__primaryMenu .wp-block-navigation-item:last-child .wp-block-navigation-item__content {
+  padding: 0.375rem;
+  border: 1px solid var(--wp--preset--color--primary, #8DD813);
+}
+.gNav__primaryMenu .wp-block-navigation-item:last-child .wp-block-navigation-item__content:hover {
+  border-color: var(--wp--preset--color--dark, #808080);
+}
+.active .gNav__primaryMenu .wp-block-navigation-item__content {
+  color: var(--wp--preset--color--lightest, #ffffff);
+}
+.active .gNav__primaryMenu .wp-block-navigation-item__content:hover {
+  border-color: var(--wp--preset--color--primary, #8DD813);
+}
+.active .gNav__primaryMenu .wp-block-navigation-item:last-child .wp-block-navigation-item__content {
+  border-color: var(--wp--preset--color--lightest, #ffffff);
+}
+.active .gNav__primaryMenu .wp-block-navigation-item:last-child .wp-block-navigation-item__content:hover {
+  border-color: var(--wp--preset--color--primary, #8DD813);
 }
 
 /**
@@ -379,23 +411,23 @@ button, input, select, textarea {
 }
 .btn.--light {
   background-color: var(--wp--preset--color--light, #b3b3b3);
-  color: var(--wp--preset--color--darkest, #262626);
+  color: var(--wp--preset--color--darker, #4d4d4d);
 }
 .btn.--lighter {
   background-color: var(--wp--preset--color--lighter, #d9d9d9);
-  color: var(--wp--preset--color--darkest, #262626);
+  color: var(--wp--preset--color--darker, #4d4d4d);
 }
 .btn.--lightest {
   background-color: var(--wp--preset--color--lightest, #ffffff);
-  color: var(--wp--preset--color--darkest, #262626);
+  color: var(--wp--preset--color--darker, #4d4d4d);
 }
 .btn.--primary {
   background-color: var(--wp--preset--color--primary, #8DD813);
-  color: var(--wp--preset--color--darkest, #262626);
+  color: var(--wp--preset--color--darker, #4d4d4d);
 }
 .btn.--primaryLight {
   background-color: var(--wp--preset--color--primary-light, #ABFF24);
-  color: var(--wp--preset--color--darkest, #262626);
+  color: var(--wp--preset--color--darker, #4d4d4d);
 }
 
 /**
@@ -467,7 +499,7 @@ button, input, select, textarea {
 .form [type=button], .form [type=reset], .form [type=submit] {
   display: block;
   background-color: var(--wp--preset--color--primary, #8DD813);
-  color: var(--wp--preset--color--darkest, #262626);
+  color: var(--wp--preset--color--darker, #4d4d4d);
   display: block;
   width: 12rem;
   margin: auto;
