@@ -675,6 +675,35 @@ button, input, select, textarea {
 }
 
 /**
+ * Project - Intro
+ */
+.intro .section__inner {
+  background-color: var(--wp--preset--color--primary, #8DD813);
+  color: var(--wp--preset--color--lightest, #ffffff);
+  text-align: center;
+}
+.intro__largeText {
+  margin-bottom: 3rem;
+  font-style: italic;
+  font-weight: 700;
+  font-size: clamp(2rem, 5.33vw, 4rem);
+  line-height: 1;
+}
+.intro__smallText {
+  margin-bottom: 3rem;
+  font-weight: 700;
+  font-size: clamp(1rem, 2.67vw, 2rem);
+  line-height: 1;
+}
+.intro__content {
+  font-weight: 700;
+  line-height: 2.4;
+}
+.intro__content p {
+  margin-bottom: 2.25rem;
+}
+
+/**
  * Project - Post Item
  */
 .postItem__info {
@@ -2164,6 +2193,15 @@ button, input, select, textarea {
   }
   .--text_lg-justify {
     text-align: justify !important;
+  }
+}
+
+/**
+ * Utility - Valid
+ */
+@media (min-width: 900px) {
+  .--valid_md {
+    display: none;
   }
 }
 

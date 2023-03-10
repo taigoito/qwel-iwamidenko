@@ -1,0 +1,35 @@
+/**
+ * Project - Intro
+ */
+
+.intro {
+  .section__inner {
+    background-color: themeColor("primary");
+    color: themeColor("lightest");
+    text-align: center;
+  }
+
+  &__largeText {
+    margin-bottom: 3rem;
+    font-style: italic;
+    font-weight: 700;
+    font-size: clamp(2rem, 5.33vw, 4rem);
+    line-height: 1;
+  }
+
+  &__smallText {
+    margin-bottom: 3rem;
+    font-weight: 700;
+    font-size: clamp(1rem, 2.67vw, 2rem);
+    line-height: 1;
+  }
+
+  &__content {
+   font-weight: 700;
+   line-height: 2.4;
+
+   p {
+     margin-bottom: 2.25rem;
+   }
+  }
+}

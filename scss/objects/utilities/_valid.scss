@@ -1,0 +1,9 @@
+/**
+ * Utility - Valid
+ */
+
+ .--valid_md {
+  @media (min-width: breakpoint("md")) {
+    display: none;
+  }
+ }

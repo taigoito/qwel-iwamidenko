@@ -215,24 +215,28 @@
 			"title": "Section Hero"
 		},
 		{
-			"name": "section-about",
-			"title": "Section About"
+			"name": "section-intro",
+			"title": "Section Intro"
 		},
 		{
-			"name": "section-news",
-			"title": "Section News"
+			"name": "section-stance",
+			"title": "Section Stance"
 		},
 		{
-			"name": "section-access",
-			"title": "Section Access"
+			"name": "section-interview",
+			"title": "Section Interview"
 		},
 		{
-			"name": "section-contact",
-			"title": "Section Contact"
+			"name": "section-works",
+			"title": "Section Works"
 		},
 		{
-			"name": "sidebar",
-			"title": "Sidebar"
+			"name": "section-career",
+			"title": "Section Career"
+		},
+		{
+			"name": "section-job-list",
+			"title": "Section Job List"
 		},
 		{
 			"name": "footer",
