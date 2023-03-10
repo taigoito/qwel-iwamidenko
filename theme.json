@@ -109,7 +109,8 @@
 				"normal": "1rem",
 				"medium": "1.17rem",
 				"large": "1.33rem",
-				"x-large": "1.5rem"
+				"x-large": "1.5rem",
+				"xx-large": "2rem"
 			},
 			"line-height": {
 				"x-small": "1.2",

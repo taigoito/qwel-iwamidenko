@@ -10,4 +10,25 @@
   &__container {
     @extend %__containerLg;
   }
+
+  &__heading {
+    display: block;
+    margin-bottom: 3rem;
+    padding-left: 0.75rem;
+    color: themeColor("dark");
+    font-weight: 700;
+    font-size: $h1FontSize;
+    line-height: 2;
+
+    &::before {
+      content: attr(id);
+      display: block;
+      color: themeColor("primary");
+      font-weight: 700;
+      font-size: $h4FontSize;
+      line-height: 2;
+      text-transform: uppercase;
+
+    }
+  }
 }
