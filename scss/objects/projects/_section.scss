@@ -13,6 +13,7 @@
 
   &__heading {
     display: block;
+    margin-top: 0;
     margin-bottom: 4.5rem;
     color: themeColor("dark");
     font-weight: 700;
@@ -28,6 +29,14 @@
       line-height: 2;
       text-transform: uppercase;
 
+    }
+
+    .has-background & {
+      color: themeColor("lightest");
+
+      &::before {
+        color: themeColor("dark");
+      }
     }
   }
 }
