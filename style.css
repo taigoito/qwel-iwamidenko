@@ -835,7 +835,7 @@ button, input, select, textarea {
 .hero__inner {
   position: relative;
   width: 100%;
-  height: calc(100vh - 3rem);
+  height: calc(100vh - 4.5rem);
   overflow: hidden;
 }
 @media (min-width: 900px) {
@@ -1144,6 +1144,11 @@ button, input, select, textarea {
 @media (max-width: 899.9px) {
   .career .section__container {
     margin-top: calc(62.5vw - 3rem);
+  }
+}
+@media (min-width: 900px) {
+  .career__content.wp-block-group p {
+    margin-left: 0 !important;
   }
 }
 .career__image {

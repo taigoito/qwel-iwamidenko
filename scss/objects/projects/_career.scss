@@ -8,6 +8,14 @@
       margin-top: calc(62.5vw - 3rem);
     }
   }
+  
+  &__content {
+    @media (min-width: breakpoint("md")) {
+      &.wp-block-group p{
+        margin-left: 0 !important;
+      }
+    }
+  }
 
   &__image {
     position: absolute;
