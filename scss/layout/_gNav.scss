@@ -26,6 +26,7 @@
     .wp-block-navigation-item {
       &__content {
         padding: 0.375rem 0;
+        border-bottom: 1px solid transparent;
         color: themeColor("primary");
         line-height: 1;
 
@@ -46,12 +47,13 @@
         }
       }
 
-      .active & {
+      .--change & {
         &__content {
           color: themeColor("lightest");
 
           &:hover {
             border-color: themeColor("primary");
+            color: themeColor("lightest");
           }
         }
 
@@ -61,6 +63,7 @@
 
             &:hover {
               border-color: themeColor("primary");
+              color: themeColor("primary");
             }
           }
         }

@@ -4,6 +4,10 @@
 
 $headerHeight: 5.25rem;
 
+:target {
+  scroll-margin-top: $headerHeight;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -16,8 +20,9 @@ $headerHeight: 5.25rem;
     position: relative;
     height: 100%;
     background-color: $bodyBg;
+    transition: .35s all ease-in-out;
 
-    &.active {
+    .--change & {
       background-color: transparent;
     }
   }
