@@ -13,6 +13,7 @@ $headerHeight: 5.25rem;
   height: $headerHeight;
 
   &__inner {
+    position: relative;
     height: 100%;
     background-color: $bodyBg;
 
@@ -23,6 +24,7 @@ $headerHeight: 5.25rem;
 
   &__container {
     @include container();
+    position: static;
     height: 100%;
   }
 }

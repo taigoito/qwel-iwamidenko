@@ -11,25 +11,8 @@ trait Shortcodes {
   }
 
   public function get_copyright( $atts ) {
-    // デフォルト値
-    $atts = shortcode_atts(
-      [
-        'year' => '2022',
-        'text' => 'Qwel'
-      ],
-      $atts
-    );
 
-    // コピーライト文字列を作成
-    $copyright = '&copy; ' . $atts[ 'year' ];
-    $year = getdate()[ 'year' ];
-    if ( $atts[ 'year' ] == $year ) {
-      $copyright .= ' ' . $atts[ 'text' ];
-    } else {
-      $copyright .= ' - ' . $year . ' ' . $atts[ 'text' ];
-    }
-
-    return '<small class="copyright">' . $copyright . '</small>';
+    return '<small>&copy;Iwamidenko.Co., Ltd. All Rights Reserved.</small>';
 
   }
 

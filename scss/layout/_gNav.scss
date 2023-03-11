@@ -3,14 +3,13 @@
  */
 
 .gNav {
-  position: relative;
   height: 100%;
   @include row();
 
   &__siteBrand {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0.75rem;
+    left: 4%;
     height: 3.75rem;
 
     span {

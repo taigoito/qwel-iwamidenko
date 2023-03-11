@@ -285,6 +285,7 @@ button, input, select, textarea {
   height: 5.25rem;
 }
 .header__inner {
+  position: relative;
   height: 100%;
   background-color: var(--wp--preset--color--lightest, #ffffff);
 }
@@ -293,6 +294,7 @@ button, input, select, textarea {
 }
 .header__container {
   max-width: 1200px;
+  position: static;
   height: 100%;
 }
 
@@ -300,7 +302,6 @@ button, input, select, textarea {
  * Layout - G Nav
  */
 .gNav {
-  position: relative;
   height: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -309,8 +310,8 @@ button, input, select, textarea {
 }
 .gNav__siteBrand {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0.75rem;
+  left: 4%;
   height: 3.75rem;
 }
 .gNav__siteBrand span {
@@ -369,9 +370,64 @@ button, input, select, textarea {
  * Layout - Footer
  */
 .footer__inner {
-  padding: var(--wp--custom--spacing--x-large, 6rem);
+  position: relative;
+  padding: var(--wp--custom--spacing--large, 3rem) 0 var(--wp--custom--spacing--medium, 1.5rem);
   text-align: center;
 }
+.footer__container {
+  max-width: 1200px;
+  position: static;
+  padding: 1rem;
+}
+@media (min-width: 900px) {
+  .footer__container.wp-block-group {
+    justify-content: flex-end;
+  }
+}
+.footer__siteBrand {
+  position: absolute;
+  top: var(--wp--custom--spacing--large, 3rem);
+  left: 4%;
+  height: 3.75rem;
+  text-align: left;
+}
+.footer__siteBrand span {
+  display: block;
+  color: var(--wp--preset--color--lightest, #ffffff);
+  line-height: 1.25;
+}
+.footer__button a {
+  background-color: var(--wp--preset--color--primary, #8DD813);
+  color: var(--wp--preset--color--darker, #4d4d4d);
+  display: block;
+  width: 12rem;
+  margin: auto;
+  padding: var(--wp--custom--spacing--small, 0.75rem);
+  border: none;
+  border-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+  word-break: break-word;
+  outline: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  width: 9rem;
+  padding: 0;
+  border: 1px solid var(--wp--preset--color--lightest, #ffffff);
+  background-color: var(--wp--preset--color--primary, #8DD813);
+  color: var(--wp--preset--color--lightest, #ffffff);
+}
+.footer__button a:hover {
+  opacity: 0.85;
+}
+.footer__button a:hover {
+  background-color: var(--wp--preset--color--lightest, #ffffff);
+  color: var(--wp--preset--color--primary, #8DD813);
+}
+
 /**
  * Layout - Title Area
  */
@@ -923,14 +979,25 @@ button, input, select, textarea {
 /**
  * Project - Career
  */
+@media (max-width: 899.9px) {
+  .career .section__container {
+    margin-top: calc(62.5vw - 3rem);
+  }
+}
 .career__image {
   position: absolute;
   top: 0;
   right: 0;
-  bottom: 0;
-  width: 50%;
-  height: 72.5%;
+  width: 100%;
+  height: 62.5vw;
   margin: auto;
+}
+@media (min-width: 900px) {
+  .career__image {
+    bottom: 0;
+    width: 50%;
+    height: 62.5%;
+  }
 }
 
 /**
