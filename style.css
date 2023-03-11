@@ -587,7 +587,9 @@ button, input, select, textarea {
  * Project - Section
  */
 .section__inner {
+  position: relative;
   background-color: var(--wp--preset--color--lightest, #ffffff);
+  overflow: hidden;
 }
 .section__heading {
   display: block;
@@ -916,6 +918,19 @@ button, input, select, textarea {
     background-color: var(--wp--preset--color--lightest, #ffffff);
     color: var(--wp--preset--color--primary, #8DD813);
   }
+}
+
+/**
+ * Project - Career
+ */
+.career__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 72.5%;
+  margin: auto;
 }
 
 /**

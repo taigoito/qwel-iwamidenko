@@ -4,7 +4,9 @@
 
 .section {
   &__inner {
+    position: relative;
     background-color: $bodyBg;
+    overflow: hidden;
   }
   
   &__container {
