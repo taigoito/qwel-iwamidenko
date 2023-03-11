@@ -678,8 +678,13 @@ button, input, select, textarea {
 .hero__inner {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 3rem);
   overflow: hidden;
+}
+@media (min-width: 900px) {
+  .hero__inner {
+    height: 100vh;
+  }
 }
 .hero__cover {
   width: 100%;
