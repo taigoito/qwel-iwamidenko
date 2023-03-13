@@ -34,7 +34,9 @@ spl_autoload_register(
 class IwamidenkoRecruit {
 	use	\IwamidenkoRecruit_Theme\Supports,
 		\IwamidenkoRecruit_Theme\Scripts,
-		\IwamidenkoRecruit_Theme\Shortcodes;
+		\IwamidenkoRecruit_Theme\Shortcodes,
+		\IwamidenkoRecruit_Theme\ChangePostObjectLabel,
+		\IwamidenkoRecruit_Theme\ChangePostMenuLabel;
 		
 	public function __construct() {
 		// テーマサポート機能
@@ -45,6 +47,12 @@ class IwamidenkoRecruit {
 
 		// ショートコード登録
 		add_action( 'init', [ $this, 'register_shortcode' ] );
+
+		// オブジェクトラベル変更
+		add_action( 'init', [ $this, 'change_post_object_label' ] );
+
+		// メニューラベル変更
+		add_action( 'admin_menu', [ $this, 'change_post_menu_label' ] );
 	}
 }
 
