@@ -189,6 +189,15 @@ button, input, select, textarea {
 .wp-block-image {
   overflow: hidden;
 }
+.wp-block-button__link {
+  border: 1px solid var(--wp--preset--color--primary, #8DD813);
+  background-color: var(--wp--preset--color--primary, #8DD813);
+  color: var(--wp--preset--color--lightest, #ffffff);
+}
+.wp-block-button__link:hover {
+  background-color: var(--wp--preset--color--lightest, #ffffff);
+  color: var(--wp--preset--color--primary, #8DD813);
+}
 .wp-block-query-pagination-numbers .page-numbers {
   display: inline-block;
   background-color: var(--wp--preset--color--primary, #8DD813);
@@ -254,7 +263,7 @@ button, input, select, textarea {
 /**
  * Layout
  */
-.section__container, .titleArea__container, .footer__container, .main__container, .header__container, .--flexItem_lg-12, .--flexItem_lg-11, .--flexItem_lg-10, .--flexItem_lg-9, .--flexItem_lg-8, .--flexItem_lg-7, .--flexItem_lg-6, .--flexItem_lg-5, .--flexItem_lg-4, .--flexItem_lg-3, .--flexItem_lg-2, .--flexItem_md-12, .--flexItem_md-11, .--flexItem_md-10, .--flexItem_md-9, .--flexItem_md-8, .--flexItem_md-7, .--flexItem_md-6, .--flexItem_md-5, .--flexItem_md-4, .--flexItem_md-3, .--flexItem_md-2, .--flexItem_sm-12, .--flexItem_sm-11, .--flexItem_sm-10, .--flexItem_sm-9, .--flexItem_sm-8, .--flexItem_sm-7, .--flexItem_sm-6, .--flexItem_sm-5, .--flexItem_sm-4, .--flexItem_sm-3, .--flexItem_sm-2, .--flexItem_12, .--flexItem_11, .--flexItem_10, .--flexItem_9, .--flexItem_8, .--flexItem_7, .--flexItem_6, .--flexItem_5, .--flexItem_4, .--flexItem_3, .--flexItem_2, .postList.--list .postItem__content, .postList.--list .postItem__image, .postList.--grid .post, .postItem.--single .postItem__content, .postItem.--single .postItem__image, .stance__item, .main__sidebar, .main__content {
+.section__container, .titleArea__container, .footer__container, .main__container, .header__container, .--flexItem_lg-12, .--flexItem_lg-11, .--flexItem_lg-10, .--flexItem_lg-9, .--flexItem_lg-8, .--flexItem_lg-7, .--flexItem_lg-6, .--flexItem_lg-5, .--flexItem_lg-4, .--flexItem_lg-3, .--flexItem_lg-2, .--flexItem_md-12, .--flexItem_md-11, .--flexItem_md-10, .--flexItem_md-9, .--flexItem_md-8, .--flexItem_md-7, .--flexItem_md-6, .--flexItem_md-5, .--flexItem_md-4, .--flexItem_md-3, .--flexItem_md-2, .--flexItem_sm-12, .--flexItem_sm-11, .--flexItem_sm-10, .--flexItem_sm-9, .--flexItem_sm-8, .--flexItem_sm-7, .--flexItem_sm-6, .--flexItem_sm-5, .--flexItem_sm-4, .--flexItem_sm-3, .--flexItem_sm-2, .--flexItem_12, .--flexItem_11, .--flexItem_10, .--flexItem_9, .--flexItem_8, .--flexItem_7, .--flexItem_6, .--flexItem_5, .--flexItem_4, .--flexItem_3, .--flexItem_2, .postList.--list .postItem__content, .postList.--list .postItem__image, .postList.--grid .post, .postItem.--single .postItem__content, .postItem.--single .postItem__image, .stance__item {
   position: relative;
   flex: auto;
   gap: 0;
@@ -263,7 +272,7 @@ button, input, select, textarea {
   margin-right: auto;
 }
 
-.--flexItem_lg-12, .--flexItem_lg-11, .--flexItem_lg-10, .--flexItem_lg-9, .--flexItem_lg-8, .--flexItem_lg-7, .--flexItem_lg-6, .--flexItem_lg-5, .--flexItem_lg-4, .--flexItem_lg-3, .--flexItem_lg-2, .--flexItem_md-12, .--flexItem_md-11, .--flexItem_md-10, .--flexItem_md-9, .--flexItem_md-8, .--flexItem_md-7, .--flexItem_md-6, .--flexItem_md-5, .--flexItem_md-4, .--flexItem_md-3, .--flexItem_md-2, .--flexItem_sm-12, .--flexItem_sm-11, .--flexItem_sm-10, .--flexItem_sm-9, .--flexItem_sm-8, .--flexItem_sm-7, .--flexItem_sm-6, .--flexItem_sm-5, .--flexItem_sm-4, .--flexItem_sm-3, .--flexItem_sm-2, .--flexItem_12, .--flexItem_11, .--flexItem_10, .--flexItem_9, .--flexItem_8, .--flexItem_7, .--flexItem_6, .--flexItem_5, .--flexItem_4, .--flexItem_3, .--flexItem_2, .postList.--list .postItem__content, .postList.--list .postItem__image, .postList.--grid .post, .postItem.--single .postItem__content, .postItem.--single .postItem__image, .stance__item, .main__sidebar, .main__content {
+.--flexItem_lg-12, .--flexItem_lg-11, .--flexItem_lg-10, .--flexItem_lg-9, .--flexItem_lg-8, .--flexItem_lg-7, .--flexItem_lg-6, .--flexItem_lg-5, .--flexItem_lg-4, .--flexItem_lg-3, .--flexItem_lg-2, .--flexItem_md-12, .--flexItem_md-11, .--flexItem_md-10, .--flexItem_md-9, .--flexItem_md-8, .--flexItem_md-7, .--flexItem_md-6, .--flexItem_md-5, .--flexItem_md-4, .--flexItem_md-3, .--flexItem_md-2, .--flexItem_sm-12, .--flexItem_sm-11, .--flexItem_sm-10, .--flexItem_sm-9, .--flexItem_sm-8, .--flexItem_sm-7, .--flexItem_sm-6, .--flexItem_sm-5, .--flexItem_sm-4, .--flexItem_sm-3, .--flexItem_sm-2, .--flexItem_12, .--flexItem_11, .--flexItem_10, .--flexItem_9, .--flexItem_8, .--flexItem_7, .--flexItem_6, .--flexItem_5, .--flexItem_4, .--flexItem_3, .--flexItem_2, .postList.--list .postItem__content, .postList.--list .postItem__image, .postList.--grid .post, .postItem.--single .postItem__content, .postItem.--single .postItem__image, .stance__item {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
 }
@@ -363,17 +372,9 @@ button, input, select, textarea {
 /**
  * Layout - Main
  */
-@media (min-width: 900px) {
-  .main__content {
-    flex: 6 1 36rem;
-  }
+.main__body {
+  padding: var(--wp--custom--spacing--x-large, 6rem) 0;
 }
-@media (min-width: 900px) {
-  .main__sidebar {
-    flex: 0 1 18rem;
-  }
-}
-
 /**
  * Layout - Footer
  */
@@ -441,6 +442,35 @@ button, input, select, textarea {
  */
 .titleArea__title {
   margin: 0;
+}
+.titleArea__subtitle {
+  font-size: clamp(1rem, 2.67vw, 2rem);
+}
+.titleArea .wp-block-post-title {
+  font-size: clamp(1rem, 2.67vw, 2rem);
+}
+
+/**
+ * Breadcrumb
+ */
+.breadcrumb {
+  position: relative;
+  width: 100%;
+  margin: 0 auto var(--wp--custom--spacing--medium, 1.5rem);
+  padding: var(--wp--custom--spacing--medium, 1.5rem);
+  font-size: var(--wp--custom--font-size--small, 0.875rem);
+  line-height: var(--wp--custom--line-height--large);
+  letter-spacing: 0.04rem;
+}
+.breadcrumb__item {
+  display: inline-block;
+  margin-bottom: 0;
+  text-transform: capitalize;
+}
+.breadcrumb__item:not(:first-child)::before {
+  content: ">";
+  padding-left: var(--wp--custom--spacing--x-small, 0.375rem);
+  padding-right: var(--wp--custom--spacing--x-small, 0.375rem);
 }
 
 /**
@@ -1178,7 +1208,6 @@ button, input, select, textarea {
 .postItem__heading {
   margin-top: var(--wp--custom--spacing--small, 0.75rem);
   margin-bottom: var(--wp--custom--spacing--x-small, 0.375rem);
-  font-size: var(--wp--custom--font-size--large, 1.33rem);
 }
 .postItem__excerpt {
   margin-bottom: var(--wp--custom--spacing--x-small, 0.375rem);

@@ -10,4 +10,12 @@
   &__title {
     margin: 0;
   }
+
+  &__subtitle {
+    font-size: clamp(1rem, 2.67vw, 2rem);
+  }
+
+  .wp-block-post-title {
+    font-size: clamp(1rem, 2.67vw, 2rem);
+  }
 }

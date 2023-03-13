@@ -50,6 +50,19 @@
     overflow: hidden;
   }
 
+  &-button {
+    &__link {
+      border: 1px solid themeColor("primary");
+      background-color: themeColor("primary");
+      color: themeColor("lightest");
+
+      &:hover {
+        background-color: themeColor("lightest");
+        color: themeColor("primary");
+      }
+    }
+  }
+
   &-query-pagination {
     &-numbers {
       .page-numbers {

@@ -3,16 +3,11 @@
  */
 
 .main {
+  &__body {
+    padding: space(5) 0;
+  }
+
   &__container {
     @extend %__containerLg;
-  }
-
-  &__content {
-    @include col(6, "md", true);
-  }
-
-  &__sidebar {
-    @include col(3, "md");
-
   }
 }

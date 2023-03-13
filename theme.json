@@ -53,7 +53,8 @@
 		"spacing": {
 			"blockGap": null,
 			"units": [
-				"rem"
+				"rem",
+				"vh"
 			]
 		},
 		"typography": {
@@ -201,6 +202,12 @@
 			}
 		}
 	},
+	"customTemplates": [
+		{
+			"name": "page-entry",
+			"title": "応募フォーム"
+		}
+	],
 	"templateParts": [
 		{
 			"name": "header",
