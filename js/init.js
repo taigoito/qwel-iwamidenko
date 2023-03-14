@@ -16,3 +16,7 @@ new EvilIcons();
 // Responsive Header
 import ResponsiveHeader from './_responsiveHeader.js';
 new ResponsiveHeader();
+
+// Entry Form
+import EntryForm from './_entryForm.js';
+new EntryForm();
