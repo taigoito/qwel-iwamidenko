@@ -10,6 +10,7 @@ export default class FormatText {
   constructor() {
     this._formatHeadings();
     this._formatTerms();
+    this._formatForm();
 
   }
 
@@ -48,5 +49,16 @@ export default class FormatText {
     });
 
   }
+
+
+  _formatForm() {
+    const title = document.querySelector('.entryTitle');
+    if (!title) return;
+
+    const input = document.getElementById('your-recruit');
+    input.value = title.textContent;
+
+  }
+  
 
 }

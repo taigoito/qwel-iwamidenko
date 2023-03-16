@@ -4,6 +4,11 @@ namespace IwamidenkoRecruit_Theme;
 trait Shortcodes {
   // ショートコード登録
   public function register_shortcode() {
+    // 応募フォームへのボタンを作成
+    add_shortcode( 'entryBtn', [ $this, 'get_entryBtn' ] );
+
+    // 応募フォームの表題を作成
+    add_shortcode( 'entryTitle', [ $this, 'get_entryTitle' ] );
 
     // パンくずリストを作成
     add_shortcode( 'breadcrumb', [ $this, 'get_breadcrumb' ] );
@@ -11,6 +16,31 @@ trait Shortcodes {
     // コピーライトに現在年を添える
     add_shortcode( 'copyright', [ $this, 'get_copyright' ] );
     
+  }
+
+  public function get_entryBtn() {
+    // 投稿IDを取得して、パラメータを付与したリンクを返す
+    $wp_obj = get_queried_object();
+    $post_id     = $wp_obj->ID;
+
+    $html = '<a class="btnEntry" href="../entry/?recruit_id=' . $post_id . '">この仕事に応募する</a>';
+
+    return $html;
+
+  }
+
+  public function get_entryTitle() {
+
+    if ( isset( $_GET[ 'recruit_id' ] ) ) {
+      $post_id = $_GET[ 'recruit_id' ];
+      $title   = get_the_title( $post_id );
+      $html    = '<h2 class="entryTitle">' . $title . '</h2>';
+      return $html;
+    } else {
+      $html = '';
+      return $html;
+    }
+
   }
 
   public function get_breadcrumb( $atts ) {

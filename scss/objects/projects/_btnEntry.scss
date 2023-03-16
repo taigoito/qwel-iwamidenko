@@ -1,0 +1,16 @@
+/**
+ * Project - Button Entry
+ */
+
+.btnEntry {
+  @include button();
+  width: 100%;
+  border: 1px solid themeColor("primary");
+  background-color: themeColor("primary");
+  color: themeColor("lightest");
+
+  &:hover {
+    background-color: themeColor("lightest");
+    color: themeColor("primary");
+  }
+}
