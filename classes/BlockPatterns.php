@@ -9,27 +9,25 @@ trait BlockPatterns {
       'title'        => 'recruit-columns',
       'categories'   => [ 'recruit' ],
       'descripiton'  => '採用情報カラム',
-      'content'      => '<!-- wp:columns {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"className":"\u002d\u002dflex_between"} -->
-        <div class="wp-block-columns --flex_between" style="margin-top:0;margin-bottom:0"><!-- wp:column {"width":"50%"} -->
-        <div class="wp-block-column" style="flex-basis:50%"><!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"left":"var:preset|spacing|50"}}}} -->
-        <h3 style="margin-left:var(--wp--preset--spacing--50)"><strong>チャレンジ&amp;成長できる！</strong></h3>
+      'content'      => '<!-- wp:group {"className":"recruitCols","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group recruitCols"><!-- wp:group {"className":"recruitCols__headingWrap","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group recruitCols__headingWrap"><!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"left":"var:preset|spacing|50"}}},"className":"recruitCols__heading"} -->
+        <h3 class="recruitCols__heading" style="margin-left:var(--wp--preset--spacing--50)"><strong>チャレンジ&amp;成長できる！</strong></h3>
         <!-- /wp:heading -->
         
-        <!-- wp:separator {"backgroundColor":"primary","className":"is-style-wide"} -->
-        <hr class="wp-block-separator has-text-color has-primary-color has-alpha-channel-opacity has-primary-background-color has-background is-style-wide"/>
-        <!-- /wp:separator -->
+        <!-- wp:separator {"backgroundColor":"primary","className":"is-style-wide recruitCols__line"} -->
+        <hr class="wp-block-separator has-text-color has-primary-color has-alpha-channel-opacity has-primary-background-color has-background is-style-wide recruitCols__line"/>
+        <!-- /wp:separator --></div>
+        <!-- /wp:group -->
         
-        <!-- wp:paragraph -->
-        <p>建築現場での内線工事や、ドラックストアなどの商業施設での空調・TV・インターネット通信も含めた電気設備工事のお仕事です。<br>様々な現場に出向き施工してもらいます。<br>現場に出たことがない方も、一から丁寧に教えますので安心してください！</p>
+        <!-- wp:image {"id":88,"sizeSlug":"full","linkDestination":"none","className":"recruitCols__image"} -->
+        <figure class="wp-block-image size-full recruitCols__image"><img src="https://iwamidenko.com/recruit1/wp-content/uploads/2023/03/img000.jpg" alt="" class="wp-image-88"/></figure>
+        <!-- /wp:image -->
+        
+        <!-- wp:paragraph {"className":"recruitCols__content"} -->
+        <p class="recruitCols__content">建築現場での内線工事や、ドラックストアなどの商業施設での空調・TV・インターネット通信も含めた電気設備工事のお仕事です。<br>様々な現場に出向き施工してもらいます。<br>現場に出たことがない方も、一から丁寧に教えますので安心してください！</p>
         <!-- /wp:paragraph --></div>
-        <!-- /wp:column -->
-        
-        <!-- wp:column {"width":"40%","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}}} -->
-        <div class="wp-block-column" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);flex-basis:40%"><!-- wp:image -->
-        <figure class="wp-block-image"><img alt=""/></figure>
-        <!-- /wp:image --></div>
-        <!-- /wp:column --></div>
-        <!-- /wp:columns -->'
+        <!-- /wp:group -->'
     ];
 
     register_block_pattern( $pattern1[ 'title' ], $pattern1 );
