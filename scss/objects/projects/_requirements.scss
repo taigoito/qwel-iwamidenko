@@ -14,6 +14,11 @@
   table {
     @include table();
 
+    tr {
+      border-left: 1px solid themeColor("lighter");
+      border-right: 1px solid themeColor("lighter");
+    }
+
     td {
       padding: space(3);
 

@@ -44,7 +44,7 @@ $drawerMenuDarkBg:     themeColor("primary") !default;
   &__navicon {
     color: themeColor("primary");
     opacity: 0;
-    transform: rotate(45deg);
+    transform: rotate(-45deg);
 
     @at-root .drawer:not(.--active) .drawer__navicon {
       opacity: 1;
@@ -59,7 +59,7 @@ $drawerMenuDarkBg:     themeColor("primary") !default;
 
     @at-root .drawer:not(.--active) .drawer__close {
       opacity: 0;
-      transform: rotate(-45deg);
+      transform: rotate(45deg);
     }
   }
 
