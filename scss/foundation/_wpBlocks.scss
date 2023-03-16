@@ -27,21 +27,26 @@
       }
     }
 
-    &-terms {
-      padding-left: space(2);
-
-      a::before {
-        content: "#";
-      }
-
-      &__separator {
-        padding-left: space(2);
-      }
-    }
-
     &-excerpt {
       &__more-text {
         text-align: right;
+      }
+
+      &__more-link {
+        @include button();
+        width: 7.5rem;
+        margin-right: 0;
+        padding: 0;
+        border: 1px solid themeColor("primary");
+        background-color: themeColor("primary");
+        color: themeColor("lightest");
+        font-weight: 700;
+    
+        &:hover {
+          background-color: themeColor("lightest");
+          color: themeColor("primary");
+        }
+
       }
     }
   }

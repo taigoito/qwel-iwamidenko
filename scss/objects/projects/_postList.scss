@@ -13,7 +13,7 @@
 
     .postItem {
       &__heading {
-        font-size: $h4FontSize;
+        font-size: $h2FontSize;
       }
 
       &__excerpt, &__more {
@@ -28,13 +28,7 @@
 
   &.--list {
     .post {
-      margin-bottom: space(3);
-      padding-bottom: space(3);
-      border-bottom: 1px solid themeColor('dark');
-
-      &:last-child {
-        border: 0;
-      }
+      margin-bottom: space(4);
     }
 
     .postItem {
@@ -54,7 +48,16 @@
       }
 
       &__heading {
-        font-size: $h4FontSize;
+        font-size: $h2FontSize;
+      }
+
+      &__terms {
+        background-color: transparent;
+        color: themeColor("primary");
+    
+        span {
+          padding: 0 space(2) 0 0;
+        }
       }
 
       &__excerpt, &__more {

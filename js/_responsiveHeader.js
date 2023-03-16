@@ -19,7 +19,6 @@ export default class ResponsiveHeader {
 
   // 位置を検出し .--active を付与
   _change() {
-    console.log(window.scrollY < window.innerHeight);
     if (window.scrollY < window.innerHeight) {
       this._elem.classList.add('--change');
     } else {

@@ -174,17 +174,41 @@ button, input, select, textarea {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.wp-block-post-terms {
-  padding-left: var(--wp--custom--spacing--small, 0.75rem);
-}
-.wp-block-post-terms a::before {
-  content: "#";
-}
-.wp-block-post-terms__separator {
-  padding-left: var(--wp--custom--spacing--small, 0.75rem);
-}
 .wp-block-post-excerpt__more-text {
   text-align: right;
+}
+.wp-block-post-excerpt__more-link {
+  background-color: var(--wp--preset--color--primary, #8DD813);
+  color: var(--wp--preset--color--darker, #4d4d4d);
+  display: block;
+  width: 12rem;
+  margin: auto;
+  padding: var(--wp--custom--spacing--small, 0.75rem);
+  border: none;
+  border-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+  word-break: break-word;
+  outline: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  width: 7.5rem;
+  margin-right: 0;
+  padding: 0;
+  border: 1px solid var(--wp--preset--color--primary, #8DD813);
+  background-color: var(--wp--preset--color--primary, #8DD813);
+  color: var(--wp--preset--color--lightest, #ffffff);
+  font-weight: 700;
+}
+.wp-block-post-excerpt__more-link:hover {
+  opacity: 0.85;
+}
+.wp-block-post-excerpt__more-link:hover {
+  background-color: var(--wp--preset--color--lightest, #ffffff);
+  color: var(--wp--preset--color--primary, #8DD813);
 }
 .wp-block-image {
   overflow: hidden;
@@ -606,7 +630,7 @@ button, input, select, textarea {
 .drawerMenu {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   bottom: 0;
   z-index: 1100;
   width: 100%;
@@ -844,7 +868,7 @@ button, input, select, textarea {
   line-height: 1.25;
 }
 .section__heading::before {
-  content: attr(id);
+  content: attr(data-title);
   display: block;
   color: var(--wp--preset--color--primary, #8DD813);
   font-weight: 700;
@@ -1201,6 +1225,7 @@ button, input, select, textarea {
  * Project - Post Item
  */
 .postItem__info {
+  gap: var(--wp--custom--spacing--medium, 1.5rem);
   margin-top: var(--wp--custom--spacing--small, 0.75rem);
   margin-bottom: var(--wp--custom--spacing--x-small, 0.375rem);
   font-size: var(--wp--custom--font-size--small, 0.875rem);
@@ -1208,6 +1233,14 @@ button, input, select, textarea {
 .postItem__heading {
   margin-top: var(--wp--custom--spacing--small, 0.75rem);
   margin-bottom: var(--wp--custom--spacing--x-small, 0.375rem);
+  font-size: var(--wp--custom--font-size--x-large, 1.5rem);
+}
+.postItem__terms {
+  background-color: var(--wp--preset--color--primary, #8DD813);
+  color: var(--wp--preset--color--lightest, #ffffff);
+}
+.postItem__terms span {
+  padding: 0 var(--wp--custom--spacing--x-small, 0.375rem);
 }
 .postItem__excerpt {
   margin-bottom: var(--wp--custom--spacing--x-small, 0.375rem);
@@ -1244,7 +1277,7 @@ button, input, select, textarea {
   }
 }
 .postList.--grid .postItem__heading {
-  font-size: var(--wp--custom--font-size--medium, 1.17rem);
+  font-size: var(--wp--custom--font-size--x-large, 1.5rem);
 }
 .postList.--grid .postItem__excerpt, .postList.--grid .postItem__more {
   font-size: var(--wp--custom--font-size--small, 0.875rem);
@@ -1255,12 +1288,7 @@ button, input, select, textarea {
   text-align: center;
 }
 .postList.--list .post {
-  margin-bottom: var(--wp--custom--spacing--medium, 1.5rem);
-  padding-bottom: var(--wp--custom--spacing--medium, 1.5rem);
-  border-bottom: 1px solid var(--wp--preset--color--dark, #808080);
-}
-.postList.--list .post:last-child {
-  border: 0;
+  margin-bottom: var(--wp--custom--spacing--large, 3rem);
 }
 .postList.--list .postItem {
   display: flex;
@@ -1283,7 +1311,14 @@ button, input, select, textarea {
   }
 }
 .postList.--list .postItem__heading {
-  font-size: var(--wp--custom--font-size--medium, 1.17rem);
+  font-size: var(--wp--custom--font-size--x-large, 1.5rem);
+}
+.postList.--list .postItem__terms {
+  background-color: transparent;
+  color: var(--wp--preset--color--primary, #8DD813);
+}
+.postList.--list .postItem__terms span {
+  padding: 0 var(--wp--custom--spacing--small, 0.75rem) 0 0;
 }
 .postList.--list .postItem__excerpt, .postList.--list .postItem__more {
   font-size: var(--wp--custom--font-size--small, 0.875rem);

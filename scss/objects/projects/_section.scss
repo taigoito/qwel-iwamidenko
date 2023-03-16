@@ -23,7 +23,7 @@
     line-height: 1.25;
 
     &::before {
-      content: attr(id);
+      content: attr(data-title);
       display: block;
       color: themeColor("primary");
       font-weight: 700;

@@ -17,6 +17,10 @@ new EvilIcons();
 import ResponsiveHeader from './_responsiveHeader.js';
 new ResponsiveHeader();
 
+// Format Text
+import FormatText from './_formatText.js';
+new FormatText();
+
 // Entry Form
 import EntryForm from './_entryForm.js';
 new EntryForm();
