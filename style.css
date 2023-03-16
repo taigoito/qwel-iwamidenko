@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Theme Name: Iwamidenko Recruit
 Description: This is a theme for Iwamidenko Recruit.
@@ -1547,6 +1548,13 @@ button, input, select, textarea {
 .entry input[type=submit]:hover {
   background-color: var(--wp--preset--color--lightest, #ffffff);
   color: var(--wp--preset--color--primary, #8DD813);
+}
+
+.required::after {
+  content: "※";
+  color: var(--wp--preset--color--primary, #8DD813);
+  font-size: 50%;
+  vertical-align: text-top;
 }
 
 /**

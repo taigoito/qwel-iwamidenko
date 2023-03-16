@@ -63,3 +63,10 @@
     }
   }
 }
+
+.required::after {
+  content: "※";
+  color: themeColor("primary");
+  font-size: 50%;
+  vertical-align: text-top;
+}
