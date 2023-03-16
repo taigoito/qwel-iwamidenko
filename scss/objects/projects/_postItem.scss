@@ -30,6 +30,10 @@
     margin-bottom: space(1);
   }
 
+  &__content.entry-content {
+    padding: space(3) 0;
+  }
+
   &.--single {
     .postItem {
       &__image {

@@ -36,7 +36,8 @@ class IwamidenkoRecruit {
 		\IwamidenkoRecruit_Theme\Scripts,
 		\IwamidenkoRecruit_Theme\Shortcodes,
 		\IwamidenkoRecruit_Theme\ChangePostObjectLabel,
-		\IwamidenkoRecruit_Theme\ChangePostMenuLabel;
+		\IwamidenkoRecruit_Theme\ChangePostMenuLabel,
+		\IwamidenkoRecruit_Theme\BlockPatterns;
 		
 	public function __construct() {
 		// テーマサポート機能
@@ -53,6 +54,9 @@ class IwamidenkoRecruit {
 
 		// メニューラベル変更
 		add_action( 'admin_menu', [ $this, 'change_post_menu_label' ] );
+
+		// ブロックパターン追加
+		add_action( 'init', [ $this, 'add_my_block_patterns' ] );
 	}
 }
 

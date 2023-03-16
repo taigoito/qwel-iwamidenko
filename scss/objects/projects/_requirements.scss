@@ -1,0 +1,41 @@
+/**
+ * Project - Requirements
+ */
+
+.requirements {
+  .wp-block-table {
+    @media (max-width: breakpoint("md") - 0.1) {
+      width: calc(100% + #{$gutter * 2});
+      margin-left: -$gutter !important;
+      margin-right: -$gutter !important;
+    }
+  }
+
+  table {
+    @include table();
+
+    td {
+      padding: space(3);
+
+      &:first-child {
+        background-color: rgba(0, 0, 0, 0.1);
+        font-weight: 700;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: breakpoint("md") - 0.1) {
+      tr, th, td {
+        display: block;
+      }
+
+      td:first-child {
+        border-top: 1px solid themeColor("dark");
+      }
+
+      tr:last-child td:last-child {
+        border-bottom: 1px solid themeColor("dark");
+      }
+    }
+  }
+}
