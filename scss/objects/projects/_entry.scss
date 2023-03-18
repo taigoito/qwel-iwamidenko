@@ -26,10 +26,10 @@
 
     td > input[type="text"],
     td > textarea {
-      width: 24rem;
+      width: 22.5rem;
 
       @media (min-width: breakpoint("md")) {
-        width: 36rem;
+        width: 33.75rem;
       }
     }
 

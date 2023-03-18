@@ -55,7 +55,7 @@ $spacingValues:  (
 
 // ガター
 // 行を生成することで、コンテナの端とコンテンツ間が、それぞれ1.5rem空く仕様
-$gutter:         0.75rem;
+$gutter:         1.5rem;
 $containerPad:   (
   sm:              $gutter,
   md:              var(--wp--custom--spacing--container-pad, $gutter),
