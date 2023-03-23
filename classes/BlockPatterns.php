@@ -12,7 +12,7 @@ trait BlockPatterns {
       'content'      => '<!-- wp:group {"className":"recruitCols","layout":{"type":"constrained"}} -->
         <div class="wp-block-group recruitCols"><!-- wp:group {"className":"recruitCols__headingWrap","layout":{"type":"constrained"}} -->
         <div class="wp-block-group recruitCols__headingWrap"><!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"left":"var:preset|spacing|50"}}},"className":"recruitCols__heading"} -->
-        <h3 class="recruitCols__heading" style="margin-left:var(--wp--preset--spacing--50)"><strong>チャレンジ&amp;成長できる！</strong></h3>
+        <h3 class="recruitCols__heading" style="margin-left:var(--wp--preset--spacing--50)">チャレンジ&amp;成長できる！</h3>
         <!-- /wp:heading -->
         
         <!-- wp:separator {"backgroundColor":"primary","className":"is-style-wide recruitCols__line"} -->

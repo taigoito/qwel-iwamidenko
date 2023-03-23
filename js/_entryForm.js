@@ -14,7 +14,7 @@ export default class EntryForm {
     const d = document.getElementById('your-birth-d');
     if (!(y && m && d)) return
 
-    for (let i = 2007; i > 1950; i--) {
+    for (let i = 2010; i > 1950; i--) {
       const opt = document.createElement('option');
       opt.setAttribute('value', i);
       opt.textContent = i;

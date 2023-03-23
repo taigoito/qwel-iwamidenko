@@ -4,10 +4,6 @@
 
 $headerHeight: 5.25rem;
 
-:target {
-  scroll-margin-top: $headerHeight;
-}
-
 .header {
   position: fixed;
   top: 0;

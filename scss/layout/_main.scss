@@ -3,6 +3,15 @@
  */
 
 .main {
+  &__header {
+    .wp-block-cover {
+      min-height: 24rem;
+
+      @media (min-width: breakpoint("md")) {
+        min-height: 30rem;
+      }
+    }
+  }
   &__body {
     padding: space(5) 0;
   }
