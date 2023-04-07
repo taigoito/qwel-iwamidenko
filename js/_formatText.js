@@ -57,6 +57,7 @@ export default class FormatText {
 
     const input = document.getElementById('your-recruit');
     input.value = title.textContent;
+    input.readOnly = true;
 
   }
   
