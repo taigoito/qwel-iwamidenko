@@ -26,8 +26,10 @@
     margin: auto;
 
     @media (min-width: breakpoint("md")) {
+      left: 52.5%;
+      right: auto;
       bottom: 0;
-      width: 50%;
+      width: min(50%, 40.5rem);
       height: 62.5%;
     }
   }

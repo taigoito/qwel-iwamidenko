@@ -3,6 +3,10 @@
  */
 
 .postItem {
+  &__image img {
+    aspect-ratio: 1.33;
+  }
+
   &__info {
     gap: space(3);
     margin-top: space(2);
@@ -37,11 +41,11 @@
   &.--single {
     .postItem {
       &__image {
-        @include col(4, "md", true);
+        @include col(2, "sm", true);
       }
 
       &__content {
-        @include col(5, "md", true);
+        @include col(2.5, "sm", true);
         margin-bottom: space(4);
       }
     }

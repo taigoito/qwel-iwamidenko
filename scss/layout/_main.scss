@@ -7,7 +7,7 @@
     .wp-block-cover {
       min-height: 24rem;
 
-      @media (min-width: breakpoint("md")) {
+      @media (min-width: breakpoint("sm")) {
         min-height: 30rem;
       }
     }

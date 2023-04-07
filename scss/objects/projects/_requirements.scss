@@ -43,5 +43,13 @@
         border-bottom: 1px solid themeColor("dark");
       }
     }
+
+    @media (min-width: breakpoint("md")) {
+      td:first-child {
+        width: 9rem;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
   }
 }

@@ -5,7 +5,13 @@
 .recruitCols {
   margin-bottom: space(4);
 
-  @media (min-width: breakpoint("md")) {
+  &__image img {
+    width: 100%;
+    max-width: initial;
+    aspect-ratio: 1.33;
+  }
+
+  @media (min-width: breakpoint("sm")) {
     display: grid;
     grid-template-rows: 4.5rem 1fr;
     grid-template-columns: 50% 10% 40%;
