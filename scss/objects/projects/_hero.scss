@@ -20,26 +20,38 @@
     filter: brightness(0.5);
   }
 
+  //&__coverImage {
+  //  position: absolute;
+  //  width: 100%;
+  //  height: 50%;
+
+  //  &.--image_1 {
+  //    top: 0;
+  //    left: 0;
+  //    background: url("./assets/main00.jpg") no-repeat center center / cover scroll;
+  //  }
+
+  //  &.--image_2 {
+  //    right: 0;
+  //    bottom: 0;
+  //    background: url("./assets/main01.jpg") no-repeat center center / cover scroll;
+  //  }
+
+  //  @media (min-width: breakpoint("md")) {
+  //    width: 50%;
+  //    height: 100%;
+  //  }
+  //}
+
   &__coverImage {
     position: absolute;
     width: 100%;
-    height: 50%;
+    height: 100%;
 
     &.--image_1 {
       top: 0;
       left: 0;
-      background: url("./assets/main00.jpg") no-repeat center center / cover scroll;
-    }
-
-    &.--image_2 {
-      right: 0;
-      bottom: 0;
-      background: url("./assets/main01.jpg") no-repeat center center / cover scroll;
-    }
-
-    @media (min-width: breakpoint("md")) {
-      width: 50%;
-      height: 100%;
+      background: url("./assets/main05.jpg") no-repeat center center / cover scroll;
     }
   }
 
