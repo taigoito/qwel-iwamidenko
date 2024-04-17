@@ -2,7 +2,7 @@
  * Entry Form
  * Author: Taigo Ito (https://qwel.design/)
  * Location: Fukui, Japan
- * @package Iwamidenko-Recruit
+ * @package Iwamidenko
  */
 
 export default class EntryForm {

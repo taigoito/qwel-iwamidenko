@@ -1,16 +1,16 @@
 <?php
 /**
- * Iwamidenko Recruit functions
+ * Iwamidenko functions
  * Author: Taigo Ito (https://qwel.design/)
  * Location: Fukui, Japan
- * @package Iwamidenko-Recruit
+ * @package Iwamidenko
  */
 
 /*
  * テーマのパス, URI
  */
-define( 'IwamidenkoRecruit_THEME_DIR', get_template_directory() );
-define( 'IwamidenkoRecruit_THEME_URI', get_template_directory_uri() );
+define( 'Iwamidenko_THEME_DIR', get_template_directory() );
+define( 'Iwamidenko_THEME_URI', get_template_directory_uri() );
 
 
 /*
@@ -18,10 +18,10 @@ define( 'IwamidenkoRecruit_THEME_URI', get_template_directory_uri() );
  */
 spl_autoload_register(
 	function( $classname ) {
-		if ( strpos( $classname, 'IwamidenkoRecruit_Theme' ) === false ) return;
+		if ( strpos( $classname, 'Iwamidenko_Theme' ) === false ) return;
 		$classname = str_replace( '\\', '/', $classname );
-		$classname = str_replace( 'IwamidenkoRecruit_Theme/', '', $classname );
-		$file      = IwamidenkoRecruit_THEME_DIR . '/classes/' . $classname . '.php';
+		$classname = str_replace( 'Iwamidenko_Theme/', '', $classname );
+		$file      = Iwamidenko_THEME_DIR . '/classes/' . $classname . '.php';
 		if ( file_exists( $file ) ) {
 			require $file;
 		}
@@ -31,13 +31,13 @@ spl_autoload_register(
 /*
  * Hookする関数群を継承して登録
  */
-class IwamidenkoRecruit {
-	use	\IwamidenkoRecruit_Theme\Supports,
-		\IwamidenkoRecruit_Theme\Scripts,
-		\IwamidenkoRecruit_Theme\Shortcodes,
-		\IwamidenkoRecruit_Theme\ChangePostObjectLabel,
-		\IwamidenkoRecruit_Theme\ChangePostMenuLabel,
-		\IwamidenkoRecruit_Theme\BlockPatterns;
+class Iwamidenko {
+	use	\Iwamidenko_Theme\Supports,
+		\Iwamidenko_Theme\Scripts,
+		\Iwamidenko_Theme\Shortcodes,
+		\Iwamidenko_Theme\ChangePostObjectLabel,
+		\Iwamidenko_Theme\ChangePostMenuLabel,
+		\Iwamidenko_Theme\BlockPatterns;
 		
 	public function __construct() {
 		// テーマサポート機能
@@ -61,6 +61,6 @@ class IwamidenkoRecruit {
 }
 
 /**
- * IwamidenkoRecruit start!
+ * Iwamidenko start!
  */
-new IwamidenkoRecruit();
+new Iwamidenko();

@@ -1,5 +1,5 @@
 <?php
-namespace IwamidenkoRecruit_Theme;
+namespace Iwamidenko_Theme;
 
 trait Shortcodes {
   // ショートコード登録

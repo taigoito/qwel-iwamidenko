@@ -1,5 +1,5 @@
 <?php
-namespace IwamidenkoRecruit_Theme;
+namespace Iwamidenko_Theme;
 
 trait BlockPatterns {
 
@@ -21,7 +21,7 @@ trait BlockPatterns {
         <!-- /wp:group -->
         
         <!-- wp:image {"id":88,"sizeSlug":"full","linkDestination":"none","className":"recruitCols__image"} -->
-        <figure class="wp-block-image size-full recruitCols__image"><img src="https://iwamidenko.com/recruit/wp-content/uploads/2023/03/img000.jpg" alt="" class="wp-image-88"/></figure>
+        <figure class="wp-block-image size-full recruitCols__image"><img src="https://iwamidenko.sakuraweb.com/data/uploads/img000.jpg" alt="" class="wp-image-88"/></figure>
         <!-- /wp:image -->
         
         <!-- wp:paragraph {"className":"recruitCols__content"} -->
