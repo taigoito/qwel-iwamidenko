@@ -14,7 +14,7 @@ trait Supports {
 		add_action( 'admin_menu', [ $this, 'change_post_menu_label' ] );
 
     // カスタム投稿タイプ, タクソノミーを登録
-    add_action( 'init', [ $this, 'register_news_as_post_type' ] );
+    add_action( 'init', [ $this, 'register_blog_as_post_type' ] );
   }
 
   public function support_theme() {
@@ -50,9 +50,9 @@ trait Supports {
     $submenu[ 'edit.php' ][ 10 ][ 0 ]  = '新規' . $name;
   }
 
-  public function register_news_as_post_type() {
+  public function register_blog_as_post_type() {
     $name  = 'お知らせ';
-    register_post_type( 'news', [
+    register_post_type( 'blog', [
       'labels' => [
         'name'           => $name,
         'singular_name'  => $name,
@@ -66,6 +66,9 @@ trait Supports {
       ],
       'public'         => true,
       'has_archive'    => false,
+      'rewrite'        => [
+        'with_front'     => false
+      ],
       'menu_icon'      => 'dashicons-calendar-alt',
       'menu_position'  => 5,
       'show_in_rest'   => true,
@@ -76,7 +79,7 @@ trait Supports {
       ]
     ] );
 
-    register_taxonomy( 'news_cat','news', [
+    register_taxonomy( 'blog_cat','blog', [
       'labels' => [
         'name' => 'カテゴリー'
       ],

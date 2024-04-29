@@ -204,6 +204,10 @@
 	},
 	"customTemplates": [
 		{
+			"name": "page-recruit",
+			"title": "リクルート"
+		},
+		{
 			"name": "page-entry",
 			"title": "応募フォーム"
 		}
