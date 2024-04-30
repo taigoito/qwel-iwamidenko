@@ -2,69 +2,101 @@
  * Layout - G Nav
  */
 
-.gNav {
-  height: 100%;
-  @include row();
+.header.--recruit {
+  .gNav {
+    height: 100%;
+    @include row();
 
-  &__siteBrand {
-    position: absolute;
-    top: 0.75rem;
-    left: 4%;
-    height: 3.75rem;
+    &__siteBrand {
+      position: absolute;
+      top: 0.75rem;
+      left: 4%;
+      height: 3.75rem;
 
-    span {
-      display: block;
-      color: themeColor("primary");
-      line-height: 1.25;
-    }
-  }
-
-  &__primaryMenu {
-    gap: 2.25rem;
-    font-weight: bold;
-
-    .wp-block-navigation-item {
-      &__content {
-        padding: 0.375rem 0;
-        border-bottom: 1px solid transparent;
+      span {
+        display: block;
         color: themeColor("primary");
-        line-height: 1;
-
-        &:hover {
-          border-bottom: 1px solid themeColor("dark");
-          color: themeColor("dark");
-        }
+        line-height: 1.25;
       }
+    }
 
-      &:last-child {
-        .wp-block-navigation-item__content {
-          padding: 0.375rem;
-          border: 1px solid themeColor("primary");
+    &__primaryMenu {
+      gap: 2.25rem;
+      font-weight: bold;
 
-          &:hover {
-            border-color: themeColor("dark");
-          }
-        }
-      }
-
-      .--change & {
+      .wp-block-navigation-item {
         &__content {
-          color: themeColor("lightest");
+          padding: 0.375rem 0;
+          border-bottom: 1px solid transparent;
+          color: themeColor("primary");
+          line-height: 1;
 
           &:hover {
-            border-color: themeColor("primary");
-            color: themeColor("lightest");
+            border-bottom: 1px solid themeColor("dark");
+            color: themeColor("dark");
           }
         }
 
         &:last-child {
           .wp-block-navigation-item__content {
-            border-color: themeColor("lightest");
+            padding: 0.375rem;
+            border: 1px solid themeColor("primary");
+
+            &:hover {
+              border-color: themeColor("dark");
+            }
+          }
+        }
+
+        @at-root .header.--recruit.--change .gNav__primaryMenu .wp-block-navigation-item {
+          &__content {
+            color: themeColor("lightest");
 
             &:hover {
               border-color: themeColor("primary");
-              color: themeColor("primary");
+              color: themeColor("lightest");
             }
+          }
+
+          &:last-child {
+            .wp-block-navigation-item__content {
+              border-color: themeColor("lightest");
+
+              &:hover {
+                border-color: themeColor("primary");
+                color: themeColor("primary");
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.header.--main {
+  .gNav {
+    height: 100%;
+    @include row(space-between);
+
+    &__siteBrand {
+      width: 21rem;
+    }
+
+    &__primaryMenu {
+      gap: 2.25rem;
+      font-weight: bold;
+
+      .wp-block-navigation-item {
+        &__content {
+          padding: 0.375rem 0;
+          border-bottom: 1px solid transparent;
+          color: themeColor("secondary");
+          line-height: 1;
+
+          &:hover {
+            border-bottom: 1px solid themeColor("primary");
+            color: themeColor("secondary");
           }
         }
       }

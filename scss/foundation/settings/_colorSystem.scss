@@ -9,7 +9,8 @@ $colorDefinitions: (
   lighter:           #d9d9d9, // 85%
   lightest:          #ffffff, // 100%
   primary:           #8DD813,
-  primaryLight:      #ABFF24
+  primaryLight:      #ABFF24,
+  secondary:         #003366
 );
 
 $themeColors:      (
@@ -20,7 +21,8 @@ $themeColors:      (
   lighter:           var(--wp--preset--color--lighter, map-get($colorDefinitions, "lighter")),
   lightest:          var(--wp--preset--color--lightest, map-get($colorDefinitions, "lightest")),
   primary:           var(--wp--preset--color--primary, map-get($colorDefinitions, "primary")),
-  primaryLight:      var(--wp--preset--color--primary-light, map-get($colorDefinitions, "primaryLight"))
+  primaryLight:      var(--wp--preset--color--primary-light, map-get($colorDefinitions, "primaryLight")),
+  secondary:         var(--wp--preset--color--secondary, map-get($colorDefinitions, "secondary"))
 );
 
 // 配色の配列から色指定を抽出する関数

@@ -1,0 +1,53 @@
+/**
+ * Project - Front Page
+ */
+
+.frontPage {
+  color: themeColor("lightest");
+
+  a {
+    color: themeColor("lightest");
+  }
+
+  &__main {
+    width: min(100%, 60rem);
+    margin: auto;
+    padding: $gutter var(--wp--custom--spacing--container-pad-wide, $gutter);
+  }
+
+  &__siteBrand {
+    display: block;
+    width: 24rem;
+    margin: auto;
+
+    img {
+      filter: invert(1) grayscale(1) brightness(4);
+    }
+  }
+
+  &__body {
+    padding: 3rem 0;
+  }
+
+  &__cover {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+
+    &.--triangle {
+      width: 30vw;
+      height: 30vw;
+      clip-path: polygon(0 100%, 100% 0, 100% 100%);
+      background: #99cccc;
+      opacity: 1;
+    }
+
+    &.--gradient {
+      background: linear-gradient(#42937d, #13356e);
+      opacity: 0.9;
+    }
+  }
+}

@@ -65,7 +65,7 @@ trait Supports {
         'search_items'   => $name . 'を検索'
       ],
       'public'         => true,
-      'has_archive'    => false,
+      'has_archive'    => true,
       'rewrite'        => [
         'with_front'     => false
       ],

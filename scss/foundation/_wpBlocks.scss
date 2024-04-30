@@ -56,14 +56,31 @@
   }
 
   &-button {
-    &__link {
-      border: 1px solid themeColor("primary");
-      background-color: themeColor("primary");
-      color: themeColor("lightest");
+    &.--entry {
+      .wp-block-button__link {
+        border: 1px solid themeColor("primary");
+        background-color: themeColor("primary");
+        color: themeColor("lightest");
 
-      &:hover {
-        background-color: themeColor("lightest");
-        color: themeColor("primary");
+        &:hover {
+          border: 1px solid themeColor("primary");
+          background-color: themeColor("lightest");
+          color: themeColor("primary");
+        }
+      }
+    }
+
+    &.--contact {
+      .wp-block-button__link {
+        border: 1px solid themeColor("secondary");
+        background-color: themeColor("secondary");
+        color: themeColor("lightest");
+
+        &:hover {
+          border: 1px solid themeColor("secondary");
+          background-color: themeColor("lightest");
+          color: themeColor("secondary");
+        }
       }
     }
   }

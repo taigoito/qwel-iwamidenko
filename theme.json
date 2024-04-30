@@ -43,6 +43,11 @@
 					"slug": "primary-light",
 					"name": "Primary Light",
 					"color": "#ABFF24"
+				},
+				{
+					"slug": "secondary",
+					"name": "Secondary",
+					"color": "#003366"
 				}
 			]
 		},
@@ -204,12 +209,36 @@
 	},
 	"customTemplates": [
 		{
+			"name": "archive-blog",
+			"title": "ブログ一覧"
+		},
+		{
+			"name": "single-blog",
+			"title": "ブログ詳細"
+		},
+		{
+			"name": "page-contact",
+			"title": "お問合せ"
+		},
+		{
+			"name": "page-contact-thanks",
+			"title": "お問合せ送信完了"
+		},
+		{
+			"name": "page-privacy-policy",
+			"title": "プライバシーポリシー"
+		},
+		{
 			"name": "page-recruit",
 			"title": "リクルート"
 		},
 		{
 			"name": "page-entry",
 			"title": "応募フォーム"
+		},
+		{
+			"name": "page-entry-thanks",
+			"title": "応募フォーム送信完了"
 		}
 	],
 	"templateParts": [
@@ -219,8 +248,17 @@
 			"area": "header"
 		},
 		{
+			"name": "header-recruit",
+			"title": "Header Recruit",
+			"area": "header"
+		},
+		{
 			"name": "g-nav",
 			"title": "G Nav"
+		},
+		{
+			"name": "g-nav-recruit",
+			"title": "G Nav Recruit"
 		},
 		{
 			"name": "section-hero",
@@ -253,6 +291,11 @@
 		{
 			"name": "footer",
 			"title": "Footer",
+			"area": "footer"
+		},
+		{
+			"name": "footer-recruit",
+			"title": "Footer Recruit",
 			"area": "footer"
 		}
 	]
