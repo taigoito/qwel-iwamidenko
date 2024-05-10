@@ -911,23 +911,125 @@ button, input, select, textarea {
   color: var(--wp--preset--color--lightest, #ffffff);
 }
 .frontPage__main {
-  width: min(100%, 60rem);
+  width: min(100%, 72rem);
   margin: auto;
   padding: 1.5rem var(--wp--custom--spacing--container-pad-wide, 1.5rem);
+  font-family: "Noto Serif JP", serif;
+  letter-spacing: 0.08em;
 }
 .frontPage__siteBrand {
   display: block;
-  width: 24rem;
+  width: 22.5rem;
   margin: auto;
 }
 .frontPage__siteBrand img {
   filter: invert(1) grayscale(1) brightness(4);
 }
 .frontPage__body {
+  display: flex;
+  flex-flow: row-reverse wrap;
+  justify-content: space-around;
   padding: 3rem 0;
 }
+@media (min-width: 750px) {
+  .frontPage__body {
+    flex-direction: row;
+  }
+}
+.frontPage__nav {
+  list-style-image: url(./assets/chevron.png);
+  width: min(40%, 28.8em);
+  padding-left: 1.5em;
+  font-size: 0.85rem;
+}
+@media (min-width: 750px) {
+  .frontPage__nav {
+    font-size: 1rem;
+  }
+}
+.frontPage__navItem {
+  position: relative;
+  margin-bottom: 2.25em;
+  transition: opacity ease-in-out 0.35s;
+}
+.frontPage__navItem:hover {
+  opacity: 0.7;
+}
+.frontPage__navItem a {
+  position: relative;
+  left: -1.5em;
+  display: block;
+  width: calc(100% + 1.5em);
+  padding-left: 1.5em;
+  border-bottom: 2px solid var(--wp--preset--color--lightest, #ffffff);
+}
+@media (min-width: 750px) {
+  .frontPage__navItem a {
+    padding-left: 2em;
+  }
+}
+.frontPage__navItem a:hover .frontPage__heading {
+  transform: translateX(2%);
+}
+.frontPage__heading {
+  display: block;
+  line-height: 2;
+  transition: all ease-in-out 0.35s;
+}
+.frontPage__heading.--en {
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+.frontPage__heading.--jp {
+  margin-bottom: 0.75em;
+}
+.frontPage__content {
+  writing-mode: vertical-rl;
+  font-size: 1.2rem;
+}
+@media (min-width: 750px) {
+  .frontPage__content {
+    margin-top: 3em;
+  }
+}
+.frontPage__lead.--en {
+  margin: 0 0.75em;
+  padding-top: 0.5em;
+  font-size: 1em;
+}
+@media (min-width: 750px) {
+  .frontPage__lead.--en {
+    margin: 0 1.5em;
+  }
+}
+.frontPage__lead.--jp {
+  margin: -0.5em 0.375em 0;
+  font-size: 2em;
+}
+@media (min-width: 750px) {
+  .frontPage__lead.--jp {
+    margin: -0.5em 0.75em 0;
+  }
+}
+.frontPage__footer {
+  text-align: center;
+}
+@media (min-width: 750px) {
+  .frontPage__footer {
+    padding-left: 10.5%;
+    text-align: left;
+  }
+}
+.frontPage__copyright {
+  font-size: 0.625rem;
+}
+@media (min-width: 750px) {
+  .frontPage__copyright {
+    font-size: 0.875rem;
+  }
+}
 .frontPage__cover {
-  position: absolute;
+  position: fixed;
   right: 0;
   bottom: 0;
   z-index: -1;
@@ -935,12 +1037,18 @@ button, input, select, textarea {
   height: 100vh;
 }
 .frontPage__cover.--triangle {
-  width: 30vw;
-  height: 30vw;
+  width: 90vw;
+  height: 90vw;
   -webkit-clip-path: polygon(0 100%, 100% 0, 100% 100%);
           clip-path: polygon(0 100%, 100% 0, 100% 100%);
   background: #99cccc;
   opacity: 1;
+}
+@media (min-width: 750px) {
+  .frontPage__cover.--triangle {
+    width: 30vw;
+    height: 30vw;
+  }
 }
 .frontPage__cover.--gradient {
   background: linear-gradient(#42937d, #13356e);

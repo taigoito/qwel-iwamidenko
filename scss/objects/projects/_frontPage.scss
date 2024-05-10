@@ -10,14 +10,16 @@
   }
 
   &__main {
-    width: min(100%, 60rem);
+    width: min(100%, 72rem);
     margin: auto;
     padding: $gutter var(--wp--custom--spacing--container-pad-wide, $gutter);
+    font-family: $fontFamilySerif;
+    letter-spacing: 0.08em;
   }
 
   &__siteBrand {
     display: block;
-    width: 24rem;
+    width: 22.5rem;
     margin: auto;
 
     img {
@@ -26,11 +28,120 @@
   }
 
   &__body {
+    display: flex;
+    flex-flow: row-reverse wrap;
+    justify-content: space-around;
     padding: 3rem 0;
+
+    @media (min-width: breakpoint("sm")) {
+      flex-direction: row;
+    }
+  }
+
+  &__nav {
+    list-style-image: url(./assets/chevron.png);
+    width: min(40%, 28.8em);
+    padding-left: 1.5em;
+    font-size: 0.85rem;
+
+    @media (min-width: breakpoint("sm")) {
+      font-size: 1rem;
+    }
+  }
+
+  &__navItem {
+    position: relative;
+    margin-bottom: 2.25em;
+    transition: opacity ease-in-out 0.35s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    a {
+      position: relative;
+      left: -1.5em;
+      display: block;
+      width: calc(100% + 1.5em);
+      padding-left: 1.5em;
+      border-bottom: 2px solid themeColor("lightest");
+
+      @media (min-width: breakpoint("sm")) {
+        padding-left: 2em;
+      }
+
+      &:hover {
+        .frontPage__heading {
+          transform: translateX(2%);
+        }
+      }
+    }
+  }
+
+  &__heading {
+    display: block;
+    line-height: 2;
+    transition: all ease-in-out 0.35s;
+
+    &.--en {
+      font-size: 1.5em;
+      text-transform: uppercase;
+    }
+
+    &.--jp {
+      margin-bottom: 0.75em;
+    }
+  }
+
+  &__content {
+    writing-mode: vertical-rl;
+    font-size: 1.2rem;
+
+    @media (min-width: breakpoint("sm")) {
+      margin-top: 3em;
+    }
+  }
+
+  &__lead {
+    &.--en {
+      margin: 0 0.75em;
+      padding-top: 0.5em;
+      font-size: 1em;
+
+      @media (min-width: breakpoint("sm")) {
+        margin: 0 1.5em;
+      }
+    }
+
+    &.--jp {
+      margin: -0.5em 0.375em 0;
+      font-size: 2em;
+
+      @media (min-width: breakpoint("sm")) {
+        margin: -0.5em 0.75em 0;
+      }
+    }
+  }
+
+  &__footer {
+    text-align: center;
+
+    @media (min-width: breakpoint("sm")) {
+      padding-left: 10.5%;
+      text-align: left;
+    }
+  }
+
+  &__copyright {
+    font-size: 0.625rem;
+
+    @media (min-width: breakpoint("sm")) {
+      font-size: 0.875rem;
+    }
   }
 
   &__cover {
-    position: absolute;
+    position: fixed;
     right: 0;
     bottom: 0;
     z-index: -1;
@@ -38,11 +149,16 @@
     height: 100vh;
 
     &.--triangle {
-      width: 30vw;
-      height: 30vw;
+      width: 90vw;
+      height: 90vw;
       clip-path: polygon(0 100%, 100% 0, 100% 100%);
       background: #99cccc;
       opacity: 1;
+
+      @media (min-width: breakpoint("sm")) {
+        width: 30vw;
+        height: 30vw;
+      }
     }
 
     &.--gradient {
