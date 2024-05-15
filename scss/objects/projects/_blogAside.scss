@@ -1,0 +1,25 @@
+/**
+ * Project - Blog Aside
+ */
+
+.blogAside {
+  flex: 1 0 17.25rem;
+  order: 1;
+
+  @media (min-width: breakpoint("md")) {
+    order: 0;
+  }
+
+  &__list {
+    list-style-type: none;
+    padding-left: 0;
+
+    a {
+      color: themeColor("secondary");
+
+      &:hover {
+        color: themeColor("light");
+      }
+    }
+  }
+}

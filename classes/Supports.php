@@ -84,6 +84,9 @@ trait Supports {
         'name' => 'カテゴリー'
       ],
       'hierarchical' => true,
+      'rewrite'        => [
+        'with_front'     => false
+      ],
       'show_in_rest' => true,
     ] );
   }

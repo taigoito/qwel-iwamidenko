@@ -15,6 +15,15 @@ trait Shortcodes {
 
     // コピーライトに現在年を添える
     add_shortcode( 'copyright', [ $this, 'get_copyright' ] );
+
+    // カスタム投稿のカテゴリーを取得
+    add_shortcode( 'categoryArchives', [ $this, 'get_category_archives' ] );
+
+    // カスタム投稿の年別アーカイブを取得
+    add_shortcode( 'yearlyArchives', [ $this, 'get_yearly_archives' ] );
+
+    // カスタム投稿の月別アーカイブを取得
+    add_shortcode( 'monthlyArchives', [ $this, 'get_monthly_archives' ] );
     
   }
 
@@ -241,6 +250,53 @@ trait Shortcodes {
   public function get_copyright( $atts ) {
 
     return '<small>&copy;Iwamidenko.Co., Ltd. All Rights Reserved.</small>';
+
+  }
+
+  public function get_category_archives() {
+
+    $html  = '<ul class="blogAside__list">';
+    
+    $terms = get_terms( 'blog_cat' );
+    foreach( $terms as $term ) {
+      $html .= '<li><a href="' . get_term_link($term->slug, 'blog_cat') . '">' . $term->name . '</a></li>';
+    }
+
+    $html  .= '</ul>';
+
+    return $html;
+
+  }
+
+  public function get_yearly_archives() {
+
+    $html  = '<ul class="blogAside__list">';
+
+    $html .= wp_get_archives([
+      'post_type' => 'blog',
+      'type' => 'yearly',
+      'echo' => 0
+    ]);
+
+    $html  .= '</ul>';
+
+    return $html;
+
+  }
+
+  public function get_monthly_archives() {
+
+    $html  = '<ul class="blogAside__list">';
+
+    $html .= wp_get_archives([
+      'post_type' => 'blog',
+      'type' => 'monthly',
+      'echo' => 0
+    ]);
+
+    $html  .= '</ul>';
+
+    return $html;
 
   }
 

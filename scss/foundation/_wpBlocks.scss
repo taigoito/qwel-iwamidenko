@@ -85,19 +85,16 @@
     }
   }
 
-  &-query-pagination {
-    &-numbers {
-      .page-numbers {
-        display: inline-block;
-        @include background();
-        @include makeButton();
-        padding: 1rem;
-        border: 2px solid themeColor("lightest");
+  &-query-pagination, &-query-my-pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    padding: 1.5rem;
+    border-top: 1px solid themeColor("darkest");
 
-        &.current {
-          @include background("primaryLight");
-          cursor: default;
-        }
+    &-previous, &-next, &-previous a, &-next a {
+      &:hover {
+        color: themeColor("secondary");
       }
     }
   }

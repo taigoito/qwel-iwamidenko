@@ -17,6 +17,10 @@ new EvilIcons();
 import ResponsiveHeader from './_responsiveHeader.js';
 new ResponsiveHeader();
 
+// Format Pagination
+import FormatPagination from './_formatPagination.js';
+new FormatPagination();
+
 // Format Text
 import FormatText from './_formatText.js';
 new FormatText();

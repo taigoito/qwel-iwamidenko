@@ -1,0 +1,12 @@
+/**
+ * Project - Blog Main
+ */
+
+ .blogMain {
+  flex: 2 0 34.5rem;
+  order: 0;
+
+  @media (min-width: breakpoint("md")) {
+    order: 1;
+  }
+ }
