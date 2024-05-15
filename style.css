@@ -646,6 +646,9 @@ button, input, select, textarea {
   opacity: 0;
   transform: rotate(-45deg);
 }
+.--main .drawer__navicon {
+  color: var(--wp--preset--color--secondary, #003366);
+}
 .drawer:not(.--active) .drawer__navicon {
   opacity: 1;
   transform: rotate(0);
@@ -735,6 +738,9 @@ button, input, select, textarea {
 }
 .drawerMenu.--dark {
   background-color: var(--wp--preset--color--primary, #8DD813);
+}
+.drawerMenu.--dark.--main {
+  background-color: var(--wp--preset--color--secondary, #003366);
 }
 .drawerMenu.--dark .drawerMenu__item a {
   color: var(--wp--preset--color--lightest, #ffffff);

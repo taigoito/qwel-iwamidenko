@@ -7,7 +7,13 @@
 
 // Drawer Menu
 import DrawerMenu from './_drawerMenu.js';
-new DrawerMenu({darkMode: true});
+const pathname = location.pathname;
+const arr = pathname.split('/');
+if (arr[1] && (arr[1] !== 'recruit' || (arr[2] && arr[2].slice(0, 2) == '20'))) {
+  new DrawerMenu({darkMode: true, mode: 'main'});
+} else if (arr[1] === 'recruit') {
+  new DrawerMenu({darkMode: true, mode: 'recruit'});
+} 
 
 // Evil Icons
 import EvilIcons from './_evilIcons.js';

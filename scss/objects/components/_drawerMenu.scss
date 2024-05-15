@@ -10,6 +10,7 @@ $drawerAlwaysShown:    false !default;
 $drawerPad:            0.75rem !default;  // calc関数を使用するためCSS変数を避ける
 $drawerHeight:         3.75rem !default;
 $drawerMenuDarkBg:     themeColor("primary") !default;
+$drawerMenuDarkBgSub:  themeColor("secondary") !default;
 
 .drawer {
   position: fixed;
@@ -42,9 +43,13 @@ $drawerMenuDarkBg:     themeColor("primary") !default;
   }
 
   &__navicon {
-    color: themeColor("primary");
+    color: $drawerMenuDarkBg;
     opacity: 0;
     transform: rotate(-45deg);
+
+    .--main & {
+      color: $drawerMenuDarkBgSub;
+    }
 
     @at-root .drawer:not(.--active) .drawer__navicon {
       opacity: 1;
@@ -157,6 +162,10 @@ $drawerMenuDarkBg:     themeColor("primary") !default;
 
   &.--dark {
     background-color: $drawerMenuDarkBg;
+
+    &.--main {
+      background-color: $drawerMenuDarkBgSub;
+    }
 
     .drawerMenu__item {
       a {
