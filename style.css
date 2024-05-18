@@ -486,11 +486,17 @@ button, input, select, textarea {
   color: var(--wp--preset--color--primary, #8DD813);
 }
 
+@media (min-width: 750px) {
+  .footer.--main .footer__inner > .wp-block-group {
+    justify-content: space-between;
+  }
+}
 .footer.--main .footer__siteBrand {
   width: 9rem;
 }
 .footer.--main .footer__menu {
-  gap: 2.25rem;
+  gap: 0.75rem 2.25rem;
+  padding: 0.75rem 0;
   font-weight: bold;
 }
 
@@ -1659,7 +1665,7 @@ button, input, select, textarea {
  * Project - Blog Main
  */
 .blogMain {
-  flex: 2 0 34.5rem;
+  flex: 2 2 34.5rem;
   order: 0;
 }
 @media (min-width: 900px) {
@@ -1672,7 +1678,7 @@ button, input, select, textarea {
  * Project - Blog Aside
  */
 .blogAside {
-  flex: 1 0 17.25rem;
+  flex: 1 1 17.25rem;
   order: 1;
 }
 @media (min-width: 900px) {
