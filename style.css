@@ -917,9 +917,6 @@ button, input, select, textarea {
   width: 22.5rem;
   margin: auto;
 }
-.frontPage__siteBrand img {
-  filter: invert(1) grayscale(1) brightness(4);
-}
 .frontPage__body {
   display: flex;
   flex-flow: row-reverse wrap;
