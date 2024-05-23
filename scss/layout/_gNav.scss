@@ -80,7 +80,11 @@
     @include row(space-between);
 
     &__siteBrand {
-      width: 21rem;
+      width: clamp(18rem, 38.4vw, 21rem);
+
+      img {
+        padding-bottom: 0.5rem;
+      }
     }
 
     &__primaryMenu {
