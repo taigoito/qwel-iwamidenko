@@ -5,10 +5,11 @@
 .main {
   &__header {
     .wp-block-cover {
-      min-height: 24rem;
+      min-height: 30rem;
+      //min-height: 24rem;
 
       @media (min-width: breakpoint("sm")) {
-        min-height: 30rem;
+        //min-height: 30rem;
       }
     }
   }
