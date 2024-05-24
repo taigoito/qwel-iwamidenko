@@ -9,4 +9,8 @@
   @media (min-width: breakpoint("md")) {
     order: 1;
   }
+
+  .wp-block-post-title a:hover {
+    color: themeColor("secondary");
+  }
  }

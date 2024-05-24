@@ -505,6 +505,7 @@ button, input, select, textarea {
   margin: 0;
 }
 .titleArea__subtitle {
+  font-style: normal;
   font-size: clamp(1rem, 2.67vw, 2rem);
 }
 .titleArea .wp-block-post-title {
@@ -632,7 +633,7 @@ button, input, select, textarea {
   outline: 0;
   cursor: pointer;
 }
-@media (min-width: 900px) {
+@media (min-width: 1200px) {
   .drawer {
     display: none;
   }
@@ -912,14 +913,19 @@ button, input, select, textarea {
 }
 .frontPage__siteBrand {
   display: block;
-  width: 22.5rem;
+  width: 18rem;
   margin: auto;
+}
+@media (min-width: 750px) {
+  .frontPage__siteBrand {
+    width: 22.5rem;
+  }
 }
 .frontPage__body {
   display: flex;
   flex-flow: row-reverse wrap;
   justify-content: space-around;
-  padding: 3rem 0;
+  padding: 3rem 0 0;
 }
 @media (min-width: 750px) {
   .frontPage__body {
@@ -1092,6 +1098,9 @@ button, input, select, textarea {
     width: 33.75rem;
   }
 }
+.contact__table td > a:hover {
+  color: var(--wp--preset--color--secondary, #004080);
+}
 .contact__table input[type=text],
 .contact__table textarea {
   padding: 0.375rem;
@@ -1137,8 +1146,7 @@ button, input, select, textarea {
   background-color: var(--wp--preset--color--lightest, #ffffff);
   color: var(--wp--preset--color--secondary, #004080);
 }
-
-.required::after {
+.contact .required::after {
   content: "※";
   color: var(--wp--preset--color--secondary, #004080);
   font-size: 50%;
@@ -1711,6 +1719,9 @@ button, input, select, textarea {
 .aboutUs__subheadline.--level_3 {
   font-weight: 700;
 }
+.aboutUs__subheadline.--level_3:nth-of-type(2) {
+  margin-top: 2.25rem;
+}
 .aboutUs__pageLead {
   margin-bottom: 3rem;
   font-weight: 700;
@@ -1917,6 +1928,9 @@ button, input, select, textarea {
   list-style: none;
   padding: 0;
 }
+.aboutUs__listItem {
+  margin-bottom: 0.25rem;
+}
 .aboutUs__table td:first-child {
   width: 7.5rem;
   vertical-align: top;
@@ -1951,6 +1965,9 @@ button, input, select, textarea {
   .blogMain {
     order: 1;
   }
+}
+.blogMain .wp-block-post-title a:hover {
+  color: var(--wp--preset--color--secondary, #004080);
 }
 
 /**

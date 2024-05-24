@@ -29,6 +29,10 @@
       }
     }
 
+    td > a:hover {
+      color: themeColor("secondary");
+    }
+
     input[type="text"],
     textarea {
       padding: 0.375rem;
@@ -58,11 +62,11 @@
       color: themeColor("secondary");
     }
   }
-}
 
-.required::after {
-  content: "※";
-  color: themeColor("secondary");
-  font-size: 50%;
-  vertical-align: text-top;
+  .required::after {
+    content: "※";
+    color: themeColor("secondary");
+    font-size: 50%;
+    vertical-align: text-top;
+  }
 }

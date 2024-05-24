@@ -19,8 +19,12 @@
 
   &__siteBrand {
     display: block;
-    width: 22.5rem;
+    width: 18rem;
     margin: auto;
+
+    @media (min-width: breakpoint("sm")) {
+      width: 22.5rem;
+    }
 
     img {
       //filter: invert(1) grayscale(1) brightness(4);
@@ -31,7 +35,7 @@
     display: flex;
     flex-flow: row-reverse wrap;
     justify-content: space-around;
-    padding: 3rem 0;
+    padding: 3rem 0 0;
 
     @media (min-width: breakpoint("sm")) {
       flex-direction: row;
