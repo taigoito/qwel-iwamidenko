@@ -9,6 +9,10 @@
 
   &__title {
     margin: 0;
+
+    &.has-secondary-color {
+      text-shadow: -2px 2px 4px themeColor("lightest"), 2px 2px 4px themeColor("lightest"), -2px -2px 4px themeColor("lightest"), 2px -2px 4px themeColor("lightest");
+    }
   }
 
   &__subtitle {

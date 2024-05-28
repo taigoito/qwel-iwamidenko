@@ -31,7 +31,7 @@
 
   &__headingJp {
     font-style: normal;
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 
   &__headline{
@@ -69,21 +69,13 @@
     margin-bottom: 3rem;
     font-weight: 700;
     font-size: clamp(1.75rem, 2.67vw, 2rem);
-    line-height: 1.2;
-
-    @media (min-width: breakpoint("sm")) {
-      line-height: 1.8;
-    }
+    line-height: 1.8;
   }
 
   &__sectionLead {
     font-weight: 700;
     font-size: clamp(1.5rem, 2.33vw, 1.75rem);
-    line-height: 1.2;
-
-    @media (min-width: breakpoint("sm")) {
-      line-height: 1.8;
-    }
+    line-height: 1.8;
   }
 
   &__concept {
@@ -175,6 +167,9 @@
     & > hr {
       display: inline-block;
       width: 6rem;
+      height: 1px;
+      border: none;
+      background-color: themeColor("lightest");
     }
 
     & > span:nth-of-type(2) {
@@ -205,6 +200,7 @@
 
     img {
       margin-bottom: 1.5rem;
+      padding: 0 1rem;
     }
   }
 

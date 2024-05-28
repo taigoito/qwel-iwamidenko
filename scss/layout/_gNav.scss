@@ -80,7 +80,7 @@
     @include row(space-between);
 
     &__siteBrand {
-      width: clamp(18rem, 38.4vw, 21rem);
+      width: clamp(15.5rem, 44.8vw, 21rem); // 750px時: 44.8 * 7.5 = 336px(21rem)
 
       img {
         padding-bottom: 0.5rem;
