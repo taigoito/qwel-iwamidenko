@@ -7,6 +7,10 @@
   max-width: 24rem;
   margin: auto;
 
+  @media (min-width: breakpoint("sm")) {
+    max-width: 36rem;
+  }
+
   @media (min-width: breakpoint("md")) {
     max-width: 48rem;
   }
@@ -24,9 +28,13 @@
     td > textarea {
       width: 22.5rem;
 
-      @media (min-width: breakpoint("md")) {
-        width: 33.75rem;
+      @media (min-width: breakpoint("sm")) {
+        width: 36rem;
       }
+    }
+
+    td > .mwform-tel-field > input {
+      width: 6rem;
     }
 
     td > a:hover {

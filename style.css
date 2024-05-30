@@ -1062,6 +1062,11 @@ button, input, select, textarea {
   max-width: 24rem;
   margin: auto;
 }
+@media (min-width: 750px) {
+  .contact {
+    max-width: 36rem;
+  }
+}
 @media (min-width: 900px) {
   .contact {
     max-width: 48rem;
@@ -1095,11 +1100,14 @@ button, input, select, textarea {
 .contact__table td > textarea {
   width: 22.5rem;
 }
-@media (min-width: 900px) {
+@media (min-width: 750px) {
   .contact__table td > input[type=text],
   .contact__table td > textarea {
-    width: 33.75rem;
+    width: 36rem;
   }
+}
+.contact__table td > .mwform-tel-field > input {
+  width: 6rem;
 }
 .contact__table td > a:hover {
   color: var(--wp--preset--color--secondary, #004080);
@@ -2097,6 +2105,11 @@ button, input, select, textarea {
   max-width: 24rem;
   margin: auto;
 }
+@media (min-width: 750px) {
+  .entry {
+    max-width: 36rem;
+  }
+}
 @media (min-width: 900px) {
   .entry {
     max-width: 48rem;
@@ -2130,11 +2143,14 @@ button, input, select, textarea {
 .entry__table td > textarea {
   width: 22.5rem;
 }
-@media (min-width: 900px) {
+@media (min-width: 750px) {
   .entry__table td > input[type=text],
   .entry__table td > textarea {
-    width: 33.75rem;
+    width: 36rem;
   }
+}
+.entry__table td > .mwform-tel-field > input {
+  width: 6rem;
 }
 .entry__table input[type=text],
 .entry__table textarea {
